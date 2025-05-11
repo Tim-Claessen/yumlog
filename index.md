@@ -8,7 +8,7 @@ Explore by category, protein, or prep time — and enjoy the simple pleasure of 
 
 ## 🗂️ Browse Recipes
 
-👉 [**Explore by Category**](/indexes/category.md)
+👉 [**Explore by Category**](/indexes/categories.md)
 
 *(More indexes coming soon!)*
 
