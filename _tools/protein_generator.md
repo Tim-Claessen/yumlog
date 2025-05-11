@@ -1,6 +1,6 @@
 ---
-title: Generate Recipe Lists
-private: true  # This is just a note to yourself — GitHub Pages doesn't use it
+title: Generate Protein Lists
+private: true
 ---
 
 > ⚠️ This file is not for public viewing — it helps generate the list of recipes for each category.  
@@ -17,6 +17,7 @@ SORT title ASC
 ```
 
 # Cheese
+
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(" + file.path + ")"
 FROM "recipes"
@@ -52,6 +53,7 @@ SORT title ASC
 ```
 
 # Mushroom
+
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(" + file.path + ")"
 FROM "recipes"
