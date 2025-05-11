@@ -3,8 +3,8 @@ title: Sourdough Bread
 category:
   - Bread
 protein: 
-prep_time: 30 mins
-total_time: 12-16 hours
+prep_time_mins: 30
+total_time_mins: 720
 source: Family Recipe
 tags:
   - sourdough

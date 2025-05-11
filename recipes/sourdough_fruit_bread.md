@@ -3,8 +3,8 @@ title: Sourdough Fruit Bread
 category:
   - Bread
 protein: 
-prep_time: 30 mins
-total_time: 12-16 hours
+prep_time_mins: 30
+total_time_mins: 720
 source: Family Recipe
 tags:
   - sourdough
@@ -16,6 +16,7 @@ date_created: 2025-05-11
 ## Ingredients
 - 110g starter
 - 6g salt
+- 30g honey
 - 1/2 tbsp cinnamon
 - 1/2 tbsp allspice
 - 385g water
@@ -26,17 +27,18 @@ date_created: 2025-05-11
 
 ## Instructions
 1. **Feed starter** using white flour in a 1:1:1 ratio. Use it after it has at least doubled in size (typically would rise to at least 200%).
-2. **Chop fruit** to desier
-3. **Mix starter and water** first, then mix in dry ingredients (white flour, whole wheat flour, spices, and salt).
-4. **Stretch and fold** every 30 minutes for 2 hours, folding in the fruit as you go.
-5. **Rest at room temperature** until doubled in size, usually 3-4 hours.
-6. **Fold to shape**, place in banneton, and rest for 20 minutes.
-7. Leave in the fridge for **10-12 hours**.
-8. **Score** the dough.
+2. **Chop fruit** to desired size and soak in vanilla extract.
+3. **Dissolve honey** into water to enable easier mixing.
+4. **Mix starter and water** first, then mix in dry ingredients (white flour, whole wheat flour, spices, and salt).
+5. **Stretch and fold** every 30 minutes for 2 hours, folding in the fruit as you go.
+6. **Rest at room temperature** until doubled in size, usually 3-4 hours.
+7. **Fold to shape**, place in banneton, and rest for 20 minutes.
+8. Leave in the fridge for **10-12 hours**.
 9. Preheat oven and Dutch oven to **220°C**.
-10. **Bake with the lid on** in Dutch oven for **22 minutes at 220°C**.
-11. **Bake with the lid off** in Dutch oven for **20 minutes at 180°C**.
-12. **Rest on the bench** for a minimum of 1 hour before slicing.
+10. **Score** the dough.
+11. **Bake with the lid on** in Dutch oven for **22 minutes at 220°C**.
+12. **Bake with the lid off** in Dutch oven for **20 minutes at 180°C**.
+13. **Rest on the bench** for a minimum of 1 hour before slicing.
 
 ---
 

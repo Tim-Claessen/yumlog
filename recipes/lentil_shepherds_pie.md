@@ -4,8 +4,8 @@ category:
   - Pie
 protein:
   - Lentils
-prep_time: 25 mins
-total_time: 75 mins
+prep_time_mins: 25
+total_time_mins: 75
 source: https://www.woolworths.com.au/shop/recipes/vegetable-shepherds-pie
 tags:
   - hearty

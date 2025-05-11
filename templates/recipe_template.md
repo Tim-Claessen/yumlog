@@ -11,8 +11,8 @@ protein:
   - Tofu
   - Beans
   - Eggs
-prep_time: e.g. 15 mins, 30 mins, 45 mins, or >45 mins
-total_time: e.g. 15 mins, 30 mins, 45 mins, or >45 mins
+prep_time_mins: 15
+total_time_mins: 30
 source: e.g. Family Recipe, NYT Cooking
 tags: 
 date_created: "{{date}}"
