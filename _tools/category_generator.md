@@ -14,3 +14,31 @@ WHERE category = "Bread"
 SORT title ASC
 ```
 
+# Appetisers & Sides
+
+# Bread
+
+# Condiment
+
+# Curry
+
+# Dessert
+
+# Drink
+
+# Grains & Rice
+
+# Meat
+
+# Pasta
+
+# Salad
+
+# Seafood
+
+# Slow Cooker
+
+# Snack
+
+# Soup](./indexes/category_soup.md) 
+[🎉 Special Occasion](./indexes/category_special_Occasion.md) 
