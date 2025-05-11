@@ -1,24 +1,17 @@
+# Recipe Categories
+
 Browse the recipes by category below:
-## 🍞 Bread
-[Click here to explore Bread recipes](./_recipes/Bread.md)
 
-## 🍛 Curry
-[Click here to explore Curry recipes](./_recipes/Curry.md)
+[🍞 Bread](/indexes/category_bread.md)  
 
-## 🍝 Pasta
-[Click here to explore Pasta recipes](./_recipes/Pasta.md)
+[🍛 Curry](/indexes/category_curry.md)  
 
-## 🥗 Stir-Fry
-[Click here to explore Stir-Fry recipes](./_recipes/Stir-Fry.md)
+[🍰 Dessert](/indexes/category_desserts.md)  
 
-## 🥘 Soups
-[Click here to explore Soup recipes](./_recipes/Soups.md)
+[🍝 Pasta](/indexes/category_pasta.md)  
 
-## 🍰 Desserts
-[Click here to explore Dessert recipes](./_recipes/Desserts.md)
+[🥒 Salad](/indexes/category_salads.md)  
 
-## 🍲 Stews
-[Click here to explore Stew recipes](./_recipes/Stews.md)
+[🥗 Stir-Fry](/indexes/category_stir_fry.md)  
 
-## 🥒 Salads
-[Click here to explore Salad recipes](./_recipes/Salads.md)
+[🥘 Soup](/indexes/category_soups.md)
