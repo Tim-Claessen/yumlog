@@ -7,9 +7,8 @@ category: Bread
 > Copy the rendered output below into `categories/bread.md`.
 
 ```dataview
-LIST WITHOUT ID "[[" + title + "]]" + "(" + file.link + ")"
+LIST WITHOUT ID "[" + title + "]" + "(" + file.path + ")"
 FROM "recipes"
 WHERE category = "Bread"
 SORT title ASC
 ```
-
