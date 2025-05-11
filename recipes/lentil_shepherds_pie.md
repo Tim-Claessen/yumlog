@@ -1,7 +1,6 @@
 ---
 title: Lentil Shepherd's Pie
-category:
-  - Pie
+category: Pie
 protein:
   - Lentils
 prep_time_mins: 25

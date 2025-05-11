@@ -2,10 +2,6 @@
 title: Recipe Name
 category:
   - Bread
-  - Curry
-  - Pasta
-  - Stir-Fry
-  - etc.
 protein:
   - Lentils
   - Tofu

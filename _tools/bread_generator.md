@@ -8,7 +8,8 @@ category: Bread
 > Copy the rendered output below into `categories/bread.md`.
 
 ```dataview
-list from "_recipes"
+list (title or file.name)
+from "recipes"
 where category = "Bread"
 sort title asc
 ```
