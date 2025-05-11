@@ -14,7 +14,8 @@ protein:
 prep_time: e.g. 15 mins, 30 mins, 45 mins, or >45 mins
 total_time: e.g. 15 mins, 30 mins, 45 mins, or >45 mins
 source: e.g. Family Recipe, NYT Cooking
-tags:
+tags: 
+date_created: "{{date}}"
 ---
 
 ## Ingredients
