@@ -26,5 +26,4 @@ date_created: "{{date}}"
 
 📁 [Browse by Category](categories.md)  
 🏷️ [Browse by Protein](../indexes/protein.md)  
-⏱️ [Browse by Time](../indexes/time.md)  
 🔤 [A–Z Index](../indexes/alphabet.md)
