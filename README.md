@@ -6,7 +6,7 @@ Hosted via [GitHub Pages](https://your-username.github.io/your-repo-name)
 See [[CREDITS]] for sources and acknowledgements
 
 Browse:
-- [By Category](indexes/category.md)
+- [By Category](categories.md)
 - [By Protein](indexes/protein.md)
 - [By Cooking Time](indexes/time.md)
 - [A–Z Index](indexes/alphabet.md)

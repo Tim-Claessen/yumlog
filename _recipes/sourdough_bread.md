@@ -35,7 +35,7 @@ date_created: 2025-05-11
 
 ---
 
-📁 [Browse by Category](../indexes/category.md)  
+📁 [Browse by Category](categories.md)  
 🏷️ [Browse by Protein](../indexes/protein.md)  
 ⏱️ [Browse by Time](../indexes/time.md)  
 🔤 [A–Z Index](../indexes/alphabet.md)
