@@ -2,8 +2,17 @@
 
 **Yumlog** is a cookbook I built to collect the foods we love making. Filled with delicious recipes, carefully categorised and easy to browse. Whether you're baking bread, simmering a curry, or whipping up a quick stir-fry, there's something here for every kind of cook.
 
-Explore by category, protein, or prep time — and enjoy the simple pleasure of cooking something great.
+Explore by category or protein — and enjoy the simple pleasure of cooking something great.
 
+---
+
+## 🌟 Favourites
+
+These are the go-to recipes we make all the time:
+
+- 🍞 [Sourdough Bread](/recipes/sourdough_bread.md)
+- 🥘 [Vegetable Pie](/recipes/vegetable_pie.md)
+- 
 ---
 
 ## 🗂️ Browse Recipes
@@ -12,15 +21,5 @@ Explore by category, protein, or prep time — and enjoy the simple pleasure of 
 
 *(More indexes coming soon!)*
 
----
 
-## 📖 About This Cookbook
-
-This cookbook is built using:
-
-- 📝 [Markdown](https://daringfireball.net/projects/markdown/)
-- 🧠 [Obsidian](https://obsidian.md/)
-- ☁️ [GitHub](https://github.com/)
-- 🌐 [GitHub Pages](https://pages.github.com/)
-
-> Made with 🧡 by Tim Claessen
+> Made with 🧡 by Tim Claessen & Zoe Fisher
