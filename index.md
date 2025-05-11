@@ -1,6 +1,6 @@
 # 🍽️ Welcome to Yumlog
 
-**Yumlog** is a personal, Markdown-based cookbook filled with delicious recipes, carefully categorized and easy to browse. Whether you're baking bread, simmering a curry, or whipping up a quick stir-fry, there's something here for every kind of cook.
+**Yumlog** is a cookbook I built to collect the foods we love making. Filled with delicious recipes, carefully categorised and easy to browse. Whether you're baking bread, simmering a curry, or whipping up a quick stir-fry, there's something here for every kind of cook.
 
 Explore by category, protein, or prep time — and enjoy the simple pleasure of cooking something great.
 
