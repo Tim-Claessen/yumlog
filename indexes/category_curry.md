@@ -1,1 +1,0 @@
-# 🍛 Curry Recipes 
