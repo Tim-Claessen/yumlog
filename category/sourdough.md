@@ -1,4 +1,4 @@
 # 🍞 Sourdough Recipes
 
-- [Sourdough Bread](sourdough_bread)
-- [Sourdough Fruit Bread](sourdough_fruit_bread)
+- [Sourdough Bread](app://obsidian.md/recipessourdough_bread.md)
+- [Sourdough Fruit Bread](app://obsidian.md/recipessourdough_fruit_bread.md)
