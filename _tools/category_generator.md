@@ -4,7 +4,8 @@ private: true
 ---
 
 > ⚠️ This file is not for public viewing — it helps generate the list of bread recipes using Dataview.  
-> Copy the rendered output below into `categories/bread.md`.
+> Copy the rendered output below into the relevant `category/xxx.md` file. 
+> Make sure you replace / remove 'app://obsidian.md' from the paths which are pasted
 
 
 # Appetisers & Sides
@@ -15,24 +16,6 @@ FROM "recipes"
 WHERE category = "Appetisers & Sides"
 SORT title ASC
 ```
-
-# Bread
-
-```dataview
-LIST WITHOUT ID "'" + "[" + title + "]" + "(" + file.path + ")"
-FROM "recipes"
-WHERE category = "Bread"
-SORT title ASC
-```
-
-```dataview
-LIST WITHOUT ID file.path
-FROM "recipes"
-WHERE category = "Bread"
-SORT title ASC
-```
-
-
 
 # Condiment
 
@@ -139,6 +122,15 @@ SORT title ASC
 LIST WITHOUT ID "[" + title + "]" + "(" + file.path + ")"
 FROM "recipes"
 WHERE category = "Soup"
+SORT title ASC
+```
+
+# Sourdough
+
+```dataview
+LIST WITHOUT ID "[" + title + "]" + "(./" + file.path + ")"
+FROM "recipes"
+WHERE category = "Sourdough"
 SORT title ASC
 ```
 

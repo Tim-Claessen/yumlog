@@ -1,6 +1,6 @@
 ---
 title: Sourdough Fruit Bread
-category: Bread
+category: Sourdough
 protein: 
 prep_time_mins: 30
 total_time_mins: 720
