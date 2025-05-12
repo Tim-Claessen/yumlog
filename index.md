@@ -17,8 +17,8 @@ These are the go-to recipes we make all the time:
 
 ## 🗂️ Browse Recipes
 
-📁 [**Browse by Category**](../indexes/categories.md)  
-🏷️ [**Browse by Protein**](../indexes/proteins.md)  
-🔤 [**A–Z Index**](../indexes/alphabet.md)
+📁 [**Browse by Category**](./indexes/categories.md)  
+🏷️ [**Browse by Protein**](./indexes/proteins.md)  
+🔤 [**A–Z Index**](./indexes/alphabet.md)
 
 > Made with 🧡 by Tim Claessen & Zoe Fisher
