@@ -35,15 +35,6 @@ WHERE category = "Curry"
 SORT title ASC
 ```
 
-# Dessert
-
-```dataview
-LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
-FROM "recipes"
-WHERE category = "Dessert"
-SORT title ASC
-```
-
 # Drink
 
 ```dataview
@@ -89,6 +80,15 @@ WHERE category = "Salad"
 SORT title ASC
 ```
 
+# Savoury Treat
+
+```dataview
+LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
+FROM "recipes"
+WHERE category = "Savoury"
+SORT title ASC
+```
+
 # Seafood
 
 ```dataview
@@ -107,12 +107,12 @@ WHERE category = "Slow Cooker"
 SORT title ASC
 ```
 
-# Snack
+# Sweet Treat
 
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Snack"
+WHERE category = "Sweet"
 SORT title ASC
 ```
 
