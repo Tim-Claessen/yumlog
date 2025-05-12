@@ -45,5 +45,4 @@ date_created: 2025-05-11
 
 📁 [Browse by Category](categories.md)  
 🏷️ [Browse by Protein](../_indexes/protein.md)  
-⏱️ [Browse by Time_](../indexes/time.md)  
 🔤 [A–Z Index](../_indexes/alphabet.md)
