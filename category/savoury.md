@@ -2,6 +2,7 @@
 
 - [Pinwheels](../recipes/pinwheels.md)
 
+
 ---
 
 📁 [Browse by Category](../indexes/categories.md)  

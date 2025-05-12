@@ -40,6 +40,7 @@ date_created: 2025-05-11
 3. **Meanwhile, bring a large pan of water to the boil**. Cook potatoes for 12-15 minutes or until tender. Drain and return to the pan. Mash, then add butter and milk. Mash again until quite smooth, then season.
 4. **Preheat oven to 220°C**. Spoon vegetable mixture into an 8-cup capacity ovenproof dish. Top with mash and sprinkle over parmesan. Bake for 20 minutes or until golden. Serve.
 
+
 ---
 
 📁 [Browse by Category](../indexes/categories.md)  

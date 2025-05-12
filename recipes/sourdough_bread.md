@@ -34,6 +34,7 @@ date_created: 2025-05-11
 10. **Bake with the lid off** in Dutch oven for **20 minutes at 180°C**.
 11. **Rest on the bench** for a minimum of 1 hour before slicing.
 
+
 ---
 
 📁 [Browse by Category](../indexes/categories.md)  

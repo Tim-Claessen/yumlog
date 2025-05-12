@@ -29,6 +29,7 @@ date_created: 2025-05-12
 3. **Stir** apple and sour cream in a medium bowl. Spread mixture evenly over warm base; smooth surface. Sprinkle with nutmeg. Bake for 15 minutes.
 4. **Cool to room temperature**. Cover with plastic food wrap; chill for 2 hours or until firm. Cut into squares to serve.
 
+
 ---
 
 📁 [Browse by Category](../indexes/categories.md)  
