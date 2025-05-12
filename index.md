@@ -11,7 +11,7 @@ Explore by category or protein — and enjoy the simple pleasure of cooking some
 These are the go-to recipes we make all the time:
 
 - 🍞 [Sourdough Bread](/recipes/sourdough_bread.md)
-- 🍰 [Apple Pie Slice](/recipes/apple_slice_pie.md)
+- 🍰 [Apple Pie Slice](/recipes/apple_pie_slice.md)
 
 ---
 
@@ -20,5 +20,6 @@ These are the go-to recipes we make all the time:
 📁 [**Browse by Category**](./indexes/categories.md)  
 🏷️ [**Browse by Protein**](./indexes/proteins.md)  
 🔤 [**A–Z Index**](./indexes/alphabet.md)
+
 
 > Made with 🧡 by Tim Claessen & Zoe Fisher
