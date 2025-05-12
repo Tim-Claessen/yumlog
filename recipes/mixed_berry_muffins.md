@@ -31,3 +31,9 @@ date_created: 2025-05-12
 2.       **Sift flour** into large bowl; add sugar then combine extract, egg, butter, milk and rind. Add berries and stir thorough gently.
 3.       **Divide muffin mixture** among holes of prepared pans.
 4.       **Bake muffins** in oven for about 35 minutes. Stand muffins in pan for a few minutes before turning onto a wire rack.
+
+---
+
+📁 [Browse by Category](../indexes/categories.md)  
+🏷️ [Browse by Protein](../indexes/proteins.md)  
+🔤 [A–Z Index](../indexes/alphabet.md)
