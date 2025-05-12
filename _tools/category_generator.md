@@ -19,11 +19,20 @@ SORT title ASC
 # Bread
 
 ```dataview
-LIST WITHOUT ID "[" + title + "]" + "(" + file.path + ")"
+LIST WITHOUT ID "'" + "[" + title + "]" + "(" + file.path + ")"
 FROM "recipes"
 WHERE category = "Bread"
 SORT title ASC
 ```
+
+```dataview
+LIST WITHOUT ID file.path
+FROM "recipes"
+WHERE category = "Bread"
+SORT title ASC
+```
+
+
 
 # Condiment
 

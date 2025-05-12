@@ -1,7 +1,6 @@
 ---
 title: Recipe Name
-category:
-  - Bread
+category: Bread
 protein:
   - Lentils
   - Tofu
