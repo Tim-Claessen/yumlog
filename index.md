@@ -11,7 +11,7 @@ Explore by category or protein — and enjoy the simple pleasure of cooking some
 These are the go-to recipes we make all the time:
 
 - 🍞 [Sourdough Bread](/recipes/sourdough_bread.md)
-- 🥘 [Vegetable Pie](/recipes/vegetable_pie.md)
+- 🍰 [Apple Pie Slice](/recipes/apple_slice_pie.md)
 
 ---
 
