@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yumlog — Page Not Found</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      padding: 4rem 2rem;
+      text-align: center;
+      max-width: 600px;
+      margin: auto;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light {
+      background-color: #f5f6f8;
+      color: #2e2e2e;
+    }
+
+    body.dark {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+
+    .emoji {
+      font-size: 4.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: inherit;
+      line-height: 1.5;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #4a8ddf;
+      border: 1px solid #4a8ddf;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      background-color: #4a8ddf;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.body.className = prefersDark ? 'dark' : 'light';
+  </script>
+
+  <div class="emoji">⏳</div>
+  <h1>This page is still simmering...</h1>
+  <p>Oops! Looks like this page isn’t complete yet. But don’t worry — good things take time to cook. 🍳</p>
+  <a href="/">Return to the Cookbook</a>
+</body>
+</html>
