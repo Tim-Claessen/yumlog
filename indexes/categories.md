@@ -2,7 +2,7 @@
 
 Browse the recipes by category below:
 
-[🥂 Appetisers & Sides](appetisers_sides) 
+[🥂 Appetisers & Sides](../category/appetisers_sides.md) 
 [🍲 Soup](../category/condiment.md)
 [🍯 Condiment](../category/condiment.md) 
 [🍛 Curry](../category/curry.md) 
@@ -16,5 +16,5 @@ Browse the recipes by category below:
 [🥖 Savoury Treat](../category/savoury.md) 
 [🍪 Sweet Treat](../category/sweet.md) 
 [🥘 Soup](../category/soup.md)
-[🍞 Sourdough](sourdough) 
+[🍞 Sourdough](../category/sourdough.md) 
 [🎉 Special Occasion](../category/special_occasion.md) 
