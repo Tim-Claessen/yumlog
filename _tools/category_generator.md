@@ -5,7 +5,7 @@ private: true
 
 > ⚠️ This file is not for public viewing — it helps generate the list of bread recipes using Dataview.  
 > Copy the rendered output below into the relevant `category/xxx.md` file. 
-> Make sure you replace / remove 'app://obsidian.md' from the paths which are pasted
+> Make sure you replace / remove 'app://obsidian.md' from the paths which are pasted and replace with '..' to ensure relative paths are maintained
 
 
 # Appetisers & Sides
