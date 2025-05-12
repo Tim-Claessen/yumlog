@@ -1,6 +1,6 @@
 # Recipe Categories
 
-Browse the recipes by category below:
+Browse the recipes by category:
 
 [🥂 Appetisers & Sides](../category/appetisers_sides.md) 
 [🍲 Soup](../category/condiment.md)

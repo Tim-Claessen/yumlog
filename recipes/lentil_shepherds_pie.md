@@ -11,6 +11,8 @@ tags:
 date_created: 2025-05-11
 ---
 
+# Lentil Shepherd's Pie
+
 ## Ingredients
 - 2 cloves garlic
 - 50g butter

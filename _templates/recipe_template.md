@@ -13,6 +13,8 @@ tags:
 date_created: "{{date}}"
 ---
 
+# Recipe Name
+
 ## Ingredients
 - Ingredient 1
 - Ingredient 2

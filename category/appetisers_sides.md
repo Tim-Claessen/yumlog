@@ -1,1 +1,1 @@
-# 🥂 Appetisers & Sides Recipes
+# 🥂 Appetisers & Sides
