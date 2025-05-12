@@ -43,6 +43,6 @@ date_created: 2025-05-11
 
 ---
 
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/proteins.md)  
+📁 [Browse Category](../indexes/categories.md)  
+🏷️ [Browse Protein](../indexes/proteins.md)  
 🔤 [A–Z Index](../indexes/alphabet.md)
