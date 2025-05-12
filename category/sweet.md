@@ -1,3 +1,3 @@
 # 🍪 Sweet Treat
 
-- [Apple Pie Slice](apple_pie_slice.md)
+- [Apple Pie Slice](../recipes/apple_pie_slice.md)
