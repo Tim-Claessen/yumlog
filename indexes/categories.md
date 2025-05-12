@@ -1,4 +1,4 @@
-# Recipe Categories
+# 📁 Browse by Category
 
 Browse the recipes by category:
 

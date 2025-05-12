@@ -17,7 +17,9 @@ These are the go-to recipes we make all the time:
 
 ## 🗂️ Browse Recipes
 
-👉 [**Explore by Category**](/indexes/categories.md)
+📁 [**Browse by Category**](categories.md)  
+🏷️ [**Browse by Protein**](../indexes/proteins.md)  
+🔤 [**A–Z Index**](../indexes/alphabet.md)
 
 *(More indexes coming soon!)*
 

@@ -1,5 +1,7 @@
-# Protein Categories
+# 🏷️ Browse by Protein
 
+⌛ *Coming soon...*
+<!--- 
 Browse the protein types below:
 
 [🫘 Beans](./indexes/category_beans.md)  
@@ -9,4 +11,5 @@ Browse the protein types below:
 [🥣 Lentils](./indexes/category_lentils.md)  
 [🍄 Mushrooms](./indexes/category_mushrooms.md)  
 [🌰 Nuts & Seeds](./indexes/category_nuts_seeds.md)  
-[🍽️ Tofu](./indexes/category_tofu.md)  
+[🍽️ Tofu](./indexes/category_tofu.md) 
+---!>
