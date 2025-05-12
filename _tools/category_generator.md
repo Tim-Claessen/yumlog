@@ -128,7 +128,7 @@ SORT title ASC
 # Sourdough
 
 ```dataview
-LIST WITHOUT ID "[" + title + "]" + "(./" + file.path + ")"
+LIST WITHOUT ID "[" + title + "]" + "(" + file.name + ")"
 FROM "recipes"
 WHERE category = "Sourdough"
 SORT title ASC
