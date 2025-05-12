@@ -12,3 +12,8 @@ Browse the protein types below:
 [🍄 Mushrooms](./indexes/category_mushrooms.md)  
 [🌰 Nuts & Seeds](./indexes/category_nuts_seeds.md)  
 [🍽️ Tofu](./indexes/category_tofu.md) 
+
+---
+
+📁 [Browse by Category](../indexes/categories.md)  
+🔤 [A–Z Index](../indexes/alphabet.md)
