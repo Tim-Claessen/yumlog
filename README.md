@@ -3,7 +3,7 @@ Zoe & Tim's favourite recipes
 
 Hosted via [GitHub Pages](https://your-username.github.io/your-repo-name)
 
-See [[CREDITS]] for sources and acknowledgements
+See [Credits](Credits.md) for sources and acknowledgements
 
 Browse:
 - [By Category](categories.md)
