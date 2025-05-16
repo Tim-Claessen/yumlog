@@ -13,6 +13,7 @@ Browse the protein types below:
 [🌰 Nuts & Seeds](./indexes/category_nuts_seeds.md)  
 [🍽️ Tofu](./indexes/category_tofu.md)
 [🍆 Vegetable](./indexes/category_vegetable.md)
+[🍴 Other](./indexes/category_other.md)
 
 
 ---

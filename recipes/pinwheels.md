@@ -2,13 +2,14 @@
 title: Pinwheels
 category: Savoury
 protein:
-  -
+  - Other
 prep_time_mins: 10
 total_time_mins: 30
 source: Tahlia Alvin Recipe
-tags: 
-- Baking
-- Morning tea
+tags:
+  - Baking
+  - Morning
+  - tea
 date_created: 2025-05-12
 ---
 

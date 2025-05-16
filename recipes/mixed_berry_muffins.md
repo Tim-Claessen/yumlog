@@ -1,7 +1,8 @@
 ---
 title: Mixed Berry Muffins
 category: Sweet
-protein: 
+protein:
+  - Other
 prep_time_mins: 10
 total_time_mins: 40
 source: Women’s Weekly

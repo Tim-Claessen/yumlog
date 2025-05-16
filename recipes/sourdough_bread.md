@@ -1,7 +1,8 @@
 ---
 title: Sourdough Bread
 category: Sourdough
-protein: 
+protein:
+  - Other
 prep_time_mins: 30
 total_time_mins: 720
 source: Family Recipe
