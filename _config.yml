@@ -1,0 +1,5 @@
+title: Yumlog
+description: Tim & Zoe's Favorite Recipes
+baseurl: "" # Only needed if hosted in a subdirectory
+markdown: kramdown
+theme: null
