@@ -7,14 +7,14 @@ title: 🏷️ Browse by Protein
 
 Browse the protein types below:
 
-[🫘 Beans](./indexes/category_beans.md)  
-[🧀 Cheese](./indexes/category_cheese.md)  
-[🌾 Chickpeas](./indexes/category_chickpeas.md)  
-[🥚 Eggs](./indexes/category_eggs.md)  
-[🥣 Lentils](./indexes/category_lentils.md)  
-[🍄 Mushrooms](./indexes/category_mushrooms.md)  
-[🌰 Nuts & Seeds](./indexes/category_nuts_seeds.md)  
-[🍽️ Tofu](./indexes/category_tofu.md)  
-[🍆 Vegetable](./indexes/category_vegetable.md)  
-[🍴 Other](./indexes/category_other.md)  
+[🫘 Beans](../protein/beans.md)  
+[🧀 Cheese](../protein/cheese.md)  
+[🌾 Chickpeas](../protein/chickpeas.md)  
+[🥚 Eggs](../protein/eggs.md)  
+[🥣 Lentils](../protein/lentils.md)  
+[🍄 Mushrooms](../protein/mushrooms.md)  
+[🌰 Nuts & Seeds](../protein/nuts_seeds.md)  
+[🍽️ Tofu](../protein/tofu.md)  
+[🍆 Vegetable](../protein/vegetable.md)  
+[🍴 Other](../protein/other.md)  
 
