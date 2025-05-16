@@ -30,7 +30,7 @@ date_created: 2025-05-16
 4. **Rest** for at least 2 hours (ideally 6-8) in your cold oven (make sure the oven isnt on!!)
 5. **Pop the dough** every 1.5-2 hours
 
->*Source: https://ciaoflorentina.com/rustic-pizza-dough-recipe/
+>*Source: [https://ciaoflorentina.com/rustic-pizza-dough-recipe/](https://ciaoflorentina.com/rustic-pizza-dough-recipe/)
 
 ---
 
