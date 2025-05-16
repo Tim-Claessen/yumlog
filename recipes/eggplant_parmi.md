@@ -29,6 +29,7 @@ date_created: 2025-05-16
 - 1 teaspoon paprika
 
 ## Instructions
+
 1. **Preheat oven** to 180°C/350°F.
 2. Put **salt** on both sides of the eggplant, let it sit for 20-30 minutes and then wipe off salt and  moisture.
 3. **Heat** 1 tablespoon of the oil in a large frying pan over medium heat. Add onion; cook, stirring occasionally, for 5 minutes or until softened. Add garlic; cook, stirring, for 1 minute or until fragrant. Stir in tomatoes, passata and chilli season to taste. Transfer mixture to a medium jug

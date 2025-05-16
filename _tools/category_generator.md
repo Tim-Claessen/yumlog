@@ -62,6 +62,15 @@ WHERE category = "Main"
 SORT title ASC
 ```
 
+# Noodles
+
+```dataview
+LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
+FROM "recipes"
+WHERE category = "Noodles"
+SORT title ASC
+```
+
 # Meat
 
 ```dataview
