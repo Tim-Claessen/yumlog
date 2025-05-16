@@ -198,3 +198,57 @@
       }
 
       nav.header-nav a:hover {
+        color: var(--color-accent);
+      }
+
+      .search-placeholder {
+        border-color: var(--text-dark);
+        color: var(--text-dark);
+      }
+
+      footer {
+        border-top-color: var(--color-highlight);
+        color: var(--color-highlight);
+      }
+
+      footer nav ul li a {
+        color: var(--color-primary);
+      }
+
+      footer nav ul li a:hover {
+        color: var(--color-accent);
+      }
+
+      footer .signoff {
+        color: var(--color-highlight);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 onclick="location.href='{{ site.baseurl }}/';" tabindex="0" role="link" aria-label="Go to homepage">Yumlog</h1>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
+        <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
+        <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
+      </nav>
+      <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer>
+    <nav>
+      <ul>
+        <li>📁 <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a></li>
+        <li>🏷️ <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a></li>
+        <li>🔤 <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a></li>
+      </ul>
+    </nav>
+    <div class="signoff"> - Made with 🧡 by Tim &amp; Zoe - </div>
+  </footer>
+</body>
+</html>
