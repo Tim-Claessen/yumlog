@@ -1,6 +1,6 @@
 ---
 title: 🍽️ Welcome to Yumlog
-layout: 
+layout: default
 ---
 
 

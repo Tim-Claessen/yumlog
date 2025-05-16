@@ -1,3 +1,8 @@
+---
+layout: default
+title: 📁 Browse by Category
+---
+
 # 📁 Browse by Category
 
 Browse the recipes by category:

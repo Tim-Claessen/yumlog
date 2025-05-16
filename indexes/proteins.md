@@ -1,3 +1,8 @@
+---
+layout: default
+title: 🏷️ Browse by Protein
+---
+
 # 🏷️ Browse by Protein
 
 Browse the protein types below:

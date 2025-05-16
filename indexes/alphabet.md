@@ -1,3 +1,8 @@
+---
+layout: default
+title: 🔤 A-Z
+---
+
 # 🔤 A-Z
 
 - [Apple Pie Slice](../recipes/apple_pie_slice.md)
