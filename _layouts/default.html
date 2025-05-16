@@ -29,7 +29,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", sans-serif;
-      margin: 2rem auto;
+      margin: 1rem auto; /* Reduced vertical margin */
       padding: 0 1rem;
       max-width: 700px;
       line-height: 1.6;
@@ -56,32 +56,48 @@
       text-decoration: underline;
     }
 
-    /* Header band */
+    /* Full width header band */
     header {
       background-color: var(--header-bg-light);
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0; /* Less vertical padding */
+      box-sizing: border-box;
+      width: 100vw; /* Full viewport width */
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      border-radius: 0; /* remove rounding for full-width */
+    }
+
+    /* Container to center content */
+    .header-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-      border-radius: 4px;
-      box-sizing: border-box;
     }
 
+    /* Title white for contrast */
     header h1 {
       font-size: 1.5rem;
       font-weight: 700;
-      margin-right: 2rem;
+      margin: 0;
+      color: white; /* override to white */
       flex-shrink: 0;
+      margin-right: 2rem;
     }
 
+    /* Group nav and search closer on the right */
     nav.header-nav {
       display: flex;
-      gap: 1.25rem;
-      flex-grow: 1;
+      gap: 0.75rem; /* slightly reduced gap */
       align-items: center;
+      flex-grow: 1;
+      justify-content: flex-end;
     }
 
     nav.header-nav a {
@@ -93,9 +109,9 @@
       color: var(--color-accent);
     }
 
-    /* Search placeholder */
+    /* Search placeholder next to nav links */
     .search-placeholder {
-      margin-left: 1.5rem;
+      margin-left: 1rem;
       padding: 0.25rem 0.5rem;
       border: 1px solid white;
       border-radius: 4px;
@@ -170,6 +186,7 @@
       body {
         background-color: var(--bg-dark);
         color: var(--text-dark);
+        margin: 1rem auto;
       }
 
       h1,
@@ -189,6 +206,10 @@
       header {
         background-color: var(--header-bg-dark);
         color: var(--text-dark);
+      }
+
+      .header-container {
+        /* Keep flex alignment as in light mode */
       }
 
       nav.header-nav a {
@@ -235,13 +256,15 @@
 </head>
 <body>
   <header>
-    <h1>Yumlog</h1>
-    <nav class="header-nav" aria-label="Primary navigation">
-      <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a>
-      <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a>
-      <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a>
-    </nav>
-    <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
+    <div class="header-container">
+      <h1>Yumlog</h1>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
+        <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
+        <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
+      </nav>
+      <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
+    </div>
   </header>
 
   <nav>
@@ -258,7 +281,7 @@
         <li>🔤 <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a></li>
       </ul>
     </nav>
-    <div class="signoff">Made with 🧡 by Tim &amp; Zoe</div>
+    <div class="signoff"> - Made with 🧡 by Tim &amp; Zoe - </div>
   </footer>
 </body>
 </html>
