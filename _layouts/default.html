@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      color-scheme: light dark;
       --color-primary: #8D6E63; /* Mocha Brown */
       --color-secondary: #D7CCC8; /* Oat Milk */
       --color-accent: #F4A261; /* Burnt Orange */
@@ -14,15 +13,22 @@
       /* Light mode specifics */
       --bg-light: #FDF6F0;
       --text-light: #1E1E1E;
+      --card-bg-light: var(--color-secondary);
 
       /* Dark mode specifics */
       --bg-dark: #121212;
       --text-dark: #E0E0E0;
       --card-bg-dark: #1E1E1E;
+
+      /* For header band */
+      --header-bg-light: var(--color-primary);
+      --header-bg-dark: #5C4B44; /* Darker mocha brown shade */
     }
 
+    /* Base styles */
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", sans-serif;
       margin: 2rem auto;
       padding: 0 1rem;
       max-width: 700px;
@@ -32,13 +38,17 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       color: var(--color-primary);
+      margin: 0;
     }
 
     a {
       color: var(--color-primary);
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     a:hover {
@@ -46,16 +56,88 @@
       text-decoration: underline;
     }
 
-    nav {
-      margin-bottom: 2rem;
+    /* Header band */
+    header {
+      background-color: var(--header-bg-light);
+      color: white;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      border-radius: 4px;
+      box-sizing: border-box;
     }
 
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-right: 2rem;
+      flex-shrink: 0;
+    }
+
+    nav.header-nav {
+      display: flex;
+      gap: 1.25rem;
+      flex-grow: 1;
+      align-items: center;
+    }
+
+    nav.header-nav a {
+      font-weight: 600;
+      color: white;
+    }
+
+    nav.header-nav a:hover {
+      color: var(--color-accent);
+    }
+
+    /* Search placeholder */
+    .search-placeholder {
+      margin-left: 1.5rem;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid white;
+      border-radius: 4px;
+      background-color: transparent;
+      color: white;
+      font-style: italic;
+      font-size: 0.9rem;
+      cursor: text;
+      user-select: none;
+      flex-shrink: 0;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    /* Footer */
     footer {
       margin-top: 3rem;
       padding-top: 1rem;
       border-top: 1px solid var(--color-highlight);
       font-size: 0.9rem;
       color: var(--color-highlight);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+      font-size: 1rem;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    footer nav ul li a {
+      color: var(--color-primary);
+    }
+
+    footer nav ul li a:hover {
+      color: var(--color-accent);
     }
 
     footer .signoff {
@@ -65,6 +147,7 @@
       color: var(--color-highlight);
     }
 
+    /* Button styles */
     .home-btn {
       background-color: var(--color-primary);
       color: white;
@@ -74,52 +157,93 @@
       cursor: pointer;
       font-size: 1rem;
       text-decoration: none;
+      display: inline-block;
       transition: background-color 0.3s ease;
     }
 
     .home-btn:hover {
-      background-color: #7a5c54; /* Slightly darker Mocha Brown */
+      background-color: var(--color-accent);
     }
 
+    /* Dark mode overrides */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: var(--bg-dark);
         color: var(--text-dark);
       }
-    
-      h1, h2, h3 {
-        color: #BFA68D; /* lighter Mocha Brown */
+
+      h1,
+      h2,
+      h3 {
+        color: var(--color-primary);
       }
-    
+
       a {
-        color: #BFA68D; /* lighter Mocha Brown */
+        color: var(--color-primary);
       }
-    
+
       a:hover {
-        color: var(--color-accent); /* Burnt Orange for hover only */
+        color: var(--color-accent);
       }
-    
+
+      header {
+        background-color: var(--header-bg-dark);
+        color: var(--text-dark);
+      }
+
+      nav.header-nav a {
+        color: var(--text-dark);
+      }
+
+      nav.header-nav a:hover {
+        color: var(--color-accent);
+      }
+
+      .search-placeholder {
+        border-color: var(--text-dark);
+        color: var(--text-dark);
+      }
+
       footer {
-        border-top-color: #5A5A5A;
-        color: #B0B0B0;
+        border-top-color: var(--color-highlight);
+        color: var(--color-highlight);
       }
-    
+
+      footer nav ul li a {
+        color: var(--color-primary);
+      }
+
+      footer nav ul li a:hover {
+        color: var(--color-accent);
+      }
+
       footer .signoff {
-        color: #B0B0B0;
+        color: var(--color-highlight);
       }
-    
+
       .home-btn {
-        background-color: #A87B5B; /* Mocha Brown variant */
-        color: white;
+        background-color: var(--color-primary);
+        color: var(--text-dark);
       }
-    
+
       .home-btn:hover {
-        background-color: #945f3e; /* darker accent */
+        background-color: var(--color-accent);
+        color: var(--text-dark);
       }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Yumlog</h1>
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a>
+      <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a>
+      <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a>
+    </nav>
+    <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
+  </header>
+
   <nav>
     <a href="{{ site.baseurl }}/" class="home-btn" aria-label="Home">Home</a>
   </nav>
@@ -128,7 +252,7 @@
 
   <footer>
     <nav>
-      <ul style="list-style:none; padding:0; margin:0; font-size: 1rem;">
+      <ul>
         <li>📁 <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a></li>
         <li>🏷️ <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a></li>
         <li>🔤 <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a></li>
