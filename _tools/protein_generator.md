@@ -3,8 +3,10 @@ title: Generate Protein Lists
 private: true
 ---
 
-> ⚠️ This file is not for public viewing — it helps generate the list of recipes for each category.  
+> ⚠️ This file is not for public viewing — it helps generate the list of recipes for each protein category.  
+> 
 > Copy the rendered output below into the respective category markdown files (`protein_xxx.md`).
+> 
 >  Make sure you replace / remove 'app://obsidian.md' from the paths which are pasted and replace with '..' to ensure relative paths are maintained
 
 

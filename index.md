@@ -11,6 +11,7 @@ Explore by category, protein, or in alphabetical order — and enjoy the simple 
 These are the go-to recipes we make all the time:
 
 - 🍞 [Sourdough Bread](/recipes/sourdough_bread.md)
+- 🍕 [Pizza Dough](/recipes/pizza_dough.md)
 - 🍰 [Apple Pie Slice](/recipes/apple_pie_slice.md)
 
 ---
@@ -19,7 +20,7 @@ These are the go-to recipes we make all the time:
 
 📁 [**Browse by Category**](./indexes/categories.md)  
 🏷️ [**Browse by Protein**](./indexes/proteins.md)  
-🔤 [**A–Z Index**](./indexes/alphabet.md)
+🔤 [**A–Z**](./indexes/alphabet.md)
 
 
 

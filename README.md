@@ -44,15 +44,13 @@ _Note_: Since Yumlog is a static site, no additional setup or dependencies are r
 
 ## ✅ To-Do List
 
+- Make it look nicer
 - Add search functionality for recipes
-- Include A - Z section
+- Improve functionality of the A - Z section
 - Include image thumbnails for each recipe
-- Enable filtering by cooking time, category, and protein
-- Improve mobile responsiveness and layout
-- Add tags/labels for dietary info (optional)
-- Polish typography and spacing
--  Add a favicon and page metadata
--  Add sorting options (e.g. alphabetical, most recent)
+- Enable filtering (category, protein, cooking time)
+- Add tags/labels for dietary info
+- Add sorting options (e.g. alphabetical, most recent)
 
 ---
 
