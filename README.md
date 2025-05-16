@@ -44,7 +44,7 @@ _Note_: Since Yumlog is a static site, no additional setup or dependencies are r
 
 ## ✅ To-Do List
 
-- Make it look nicer
+- Continue to work on theme - split into 'style' 'header' 'footer' etc.
 - Add search functionality for recipes
 - Improve functionality of the A - Z section
 - Include image thumbnails for each recipe
