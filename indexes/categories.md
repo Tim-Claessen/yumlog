@@ -11,6 +11,7 @@ Browse the recipes by category:
 [🍗 Meat](../category/meat.md)
 [🍜 Noodles](../category/noodles.md)
 [🍝 Pasta](../category/pasta.md) 
+[$\pi$ Pie](../category/pasta.md)
 [🥗 Salad](../category/salad.md) 
 [🐟 Seafood](../category/seafood.md) 
 [🕰️ Slow Cooker](../category/slow_cooker.md) 

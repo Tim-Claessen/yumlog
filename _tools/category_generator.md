@@ -13,7 +13,7 @@ private: true
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(category, "appetisers_sides")
+WHERE category = [[appetisers_sides]]
 SORT title ASC
 ```
 
@@ -22,7 +22,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(category,"condiment")
+WHERE category = [[condiment]]
 SORT title ASC
 ```
 
@@ -31,7 +31,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Curry"
+WHERE category = [[curry]]
 SORT title ASC
 ```
 
@@ -40,7 +40,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Drink"
+WHERE contains(category,"drink")
 SORT title ASC
 ```
 
@@ -148,7 +148,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE cointains(category,"sourdough")
+WHERE contains(category,"sourdough")
 SORT title ASC
 ```
 
