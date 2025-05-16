@@ -29,7 +29,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", sans-serif;
-      margin: 1rem auto; /* Reduced vertical margin */
+      margin: 0 auto; /* removed top margin */
       padding: 0 1rem;
       max-width: 700px;
       line-height: 1.6;
@@ -56,63 +56,60 @@
       text-decoration: underline;
     }
 
-    /* Full width header band */
+    /* Header band */
     header {
       background-color: var(--header-bg-light);
       color: white;
-      padding: 0.5rem 0; /* Less vertical padding */
-      box-sizing: border-box;
-      width: 100vw; /* Full viewport width */
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      border-radius: 0; /* remove rounding for full-width */
-    }
-
-    /* Container to center content */
-    .header-container {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0.5rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      max-width: 700px;
+      margin: 0 auto 2rem auto; /* removed top margin */
+      border-radius: 4px;
+      box-sizing: border-box;
     }
 
-    /* Title white for contrast */
     header h1 {
       font-size: 1.5rem;
       font-weight: 700;
-      margin: 0;
-      color: white; /* override to white */
-      flex-shrink: 0;
       margin-right: 2rem;
+      flex-shrink: 0;
     }
 
-    /* Group nav and search closer on the right */
+    .header-title-link {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .header-title-link:hover,
+    .header-title-link:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
     nav.header-nav {
       display: flex;
-      gap: 0.75rem; /* slightly reduced gap */
-      align-items: center;
+      gap: 2rem; /* increased spacing from 1.25rem to 2rem */
       flex-grow: 1;
-      justify-content: flex-end;
+      align-items: center;
     }
 
     nav.header-nav a {
       font-weight: 600;
       color: white;
+      white-space: nowrap;
     }
 
     nav.header-nav a:hover {
       color: var(--color-accent);
     }
 
-    /* Search placeholder next to nav links */
+    /* Search placeholder */
     .search-placeholder {
-      margin-left: 1rem;
-      padding: 0.25rem 0.5rem;
+      margin-left: 2rem; /* increased from 1.5rem */
+      padding: 0.25rem 0.75rem; /* slightly wider */
       border: 1px solid white;
       border-radius: 4px;
       background-color: transparent;
@@ -163,30 +160,11 @@
       color: var(--color-highlight);
     }
 
-    /* Button styles */
-    .home-btn {
-      background-color: var(--color-primary);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .home-btn:hover {
-      background-color: var(--color-accent);
-    }
-
     /* Dark mode overrides */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: var(--bg-dark);
         color: var(--text-dark);
-        margin: 1rem auto;
       }
 
       h1,
@@ -208,8 +186,14 @@
         color: var(--text-dark);
       }
 
-      .header-container {
-        /* Keep flex alignment as in light mode */
+      .header-title-link {
+        color: var(--text-dark);
+      }
+
+      .header-title-link:hover,
+      .header-title-link:focus {
+        text-decoration: underline;
+        outline: none;
       }
 
       nav.header-nav a {
@@ -241,35 +225,19 @@
       footer .signoff {
         color: var(--color-highlight);
       }
-
-      .home-btn {
-        background-color: var(--color-primary);
-        color: var(--text-dark);
-      }
-
-      .home-btn:hover {
-        background-color: var(--color-accent);
-        color: var(--text-dark);
-      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="header-container">
-      <h1>Yumlog</h1>
-      <nav class="header-nav" aria-label="Primary navigation">
-        <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
-        <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
-        <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
-      </nav>
-      <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
-    </div>
+    <h1><a href="{{ site.baseurl }}/" aria-label="Home" class="header-title-link">Yumlog</a></h1>
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
+      <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
+      <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
+    </nav>
+    <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
   </header>
-
-  <nav>
-    <a href="{{ site.baseurl }}/" class="home-btn" aria-label="Home">Home</a>
-  </nav>
 
   {{ content }}
 
