@@ -2,8 +2,8 @@
 
 Browse the recipes by category:
 
-[🥂 Appetisers & Sides](../category/appetisers_sides.md) 
-[🍯 Condiment](../category/condiment.md) 
+[🥂 Appetisers & Sides](../category/appetisers_sides.md)<br>
+[🍯 Condiment](../category/condiment.md)  <br>
 [🍛 Curry](../category/curry.md) 
 [🍹 Drink](../category/drink.md) 
 [🍚 Grains & Rice](../category/grains_rice.md) 
@@ -11,7 +11,7 @@ Browse the recipes by category:
 [🍗 Meat](../category/meat.md)
 [🍜 Noodles](../category/noodles.md)
 [🍝 Pasta](../category/pasta.md) 
-[$\pi$ Pie](../category/pasta.md)
+[🍮 Pie](../category/pie.md)
 [🥗 Salad](../category/salad.md) 
 [🐟 Seafood](../category/seafood.md) 
 [🕰️ Slow Cooker](../category/slow_cooker.md) 
