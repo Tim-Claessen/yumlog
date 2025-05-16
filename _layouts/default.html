@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -29,10 +30,11 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", sans-serif;
-      margin: 0 auto; /* removed top margin */
+      margin: 0 auto;
       padding: 0 1rem;
-      max-width: 700px;
+      max-width: 900px;
       line-height: 1.6;
+      font-size: 16px;
       background-color: var(--bg-light);
       color: var(--text-light);
       transition: background-color 0.3s ease, color 0.3s ease;
@@ -56,42 +58,41 @@
       text-decoration: underline;
     }
 
-    /* Header band */
+    /* Header full-width band */
     header {
       background-color: var(--header-bg-light);
       color: white;
-      padding: 0.5rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      max-width: 700px;
-      margin: 0 auto 2rem auto; /* removed top margin */
-      border-radius: 4px;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      padding: 0.5rem 0;
       box-sizing: border-box;
     }
 
+    /* Header inner container */
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+
     header h1 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       font-weight: 700;
-      margin-right: 2rem;
+      margin-right: 3rem;
       flex-shrink: 0;
-    }
-
-    .header-title-link {
-      color: white;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    .header-title-link:hover,
-    .header-title-link:focus {
-      text-decoration: underline;
-      outline: none;
+      cursor: pointer;
     }
 
     nav.header-nav {
       display: flex;
-      gap: 2rem; /* increased spacing from 1.25rem to 2rem */
+      gap: 2rem;
       flex-grow: 1;
       align-items: center;
     }
@@ -108,18 +109,18 @@
 
     /* Search placeholder */
     .search-placeholder {
-      margin-left: 2rem; /* increased from 1.5rem */
-      padding: 0.25rem 0.75rem; /* slightly wider */
+      margin-left: 2rem;
+      padding: 0.3rem 0.7rem;
       border: 1px solid white;
       border-radius: 4px;
       background-color: transparent;
       color: white;
       font-style: italic;
-      font-size: 0.9rem;
+      font-size: 1rem;
       cursor: text;
       user-select: none;
       flex-shrink: 0;
-      min-width: 120px;
+      min-width: 140px;
       text-align: center;
     }
 
@@ -130,7 +131,7 @@
       border-top: 1px solid var(--color-highlight);
       font-size: 0.9rem;
       color: var(--color-highlight);
-      max-width: 700px;
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -184,16 +185,12 @@
       header {
         background-color: var(--header-bg-dark);
         color: var(--text-dark);
-      }
-
-      .header-title-link {
-        color: var(--text-dark);
-      }
-
-      .header-title-link:hover,
-      .header-title-link:focus {
-        text-decoration: underline;
-        outline: none;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
       }
 
       nav.header-nav a {
@@ -201,55 +198,3 @@
       }
 
       nav.header-nav a:hover {
-        color: var(--color-accent);
-      }
-
-      .search-placeholder {
-        border-color: var(--text-dark);
-        color: var(--text-dark);
-      }
-
-      footer {
-        border-top-color: var(--color-highlight);
-        color: var(--color-highlight);
-      }
-
-      footer nav ul li a {
-        color: var(--color-primary);
-      }
-
-      footer nav ul li a:hover {
-        color: var(--color-accent);
-      }
-
-      footer .signoff {
-        color: var(--color-highlight);
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1><a href="{{ site.baseurl }}/" aria-label="Home" class="header-title-link">Yumlog</a></h1>
-    <nav class="header-nav" aria-label="Primary navigation">
-      <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
-      <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
-      <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
-    </nav>
-    <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
-  </header>
-
-  {{ content }}
-
-  <footer>
-    <nav>
-      <ul>
-        <li>📁 <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a></li>
-        <li>🏷️ <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a></li>
-        <li>🔤 <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a></li>
-      </ul>
-    </nav>
-    <div class="signoff"> - Made with 🧡 by Tim &amp; Zoe - </div>
-  </footer>
-</body>
-</html>
