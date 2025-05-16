@@ -1,12 +1,15 @@
 ---
 title: Red Daal
-category: "[[main]]"
+category: "[[curry]]"
 protein:
   - "[[lentils]]"
 prep_time_mins: 5
 total_time_mins: 25
 source: https://biancazapatka.com/en/red-lentil-dahl/#recipe
-tags: 
+tags:
+  - indian
+  - daal
+  - curry
 date_created: 2025-05-16
 ---
 

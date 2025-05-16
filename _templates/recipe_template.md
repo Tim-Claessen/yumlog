@@ -16,10 +16,12 @@ date_created: "{{date}}"
 # Recipe Name
 
 ## Ingredients
+
 - Ingredient 1
 - Ingredient 2
 
 ## Instructions
+
 1. Step one
 2. Step two
 
