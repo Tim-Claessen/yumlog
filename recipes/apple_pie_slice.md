@@ -33,9 +33,3 @@ layout: default
 4. **Cool to room temperature**. Cover with plastic food wrap; chill for 2 hours or until firm. Cut into squares to serve.
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/proteins.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)
-

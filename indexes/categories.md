@@ -26,8 +26,3 @@ Browse the recipes by category:
 [🍪 Sweet Treat](../category/sweet.md)  
 [🎉 Special Occasion](../category/special_occasion.md)  
 
-
----
-
-🏷️ [Browse by Protein](../indexes/proteins.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

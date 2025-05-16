@@ -33,8 +33,3 @@ layout: default
 
 >*Source: [https://ciaoflorentina.com/rustic-pizza-dough-recipe/](https://ciaoflorentina.com/rustic-pizza-dough-recipe/)
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

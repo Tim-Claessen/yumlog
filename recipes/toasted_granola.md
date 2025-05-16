@@ -38,8 +38,4 @@ layout: default
 
 >*Source: [https://www.melanieskitchen.co.nz/sarah-days-granola/](https://www.melanieskitchen.co.nz/sarah-days-granola/)
 
----
 
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

@@ -38,8 +38,3 @@ layout: default
 5. **Heat** 2 tsp vegetable oil in a medium deep frypan over high heat. Cook the plant-based mince, breaking up the lumps with a spoon, for 3-4 mins until browned. Add the cabbage, sauce and white part of the spring onion and cook, stirring, for 1 min or until the sauce is thickened. Remove the pan from the heat.  
 6. **Divide the noodles** and mince mixture among bowls. Scatter over the fried shallots and remaining spring onion. Enjoy!
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

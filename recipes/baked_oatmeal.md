@@ -38,8 +38,3 @@ layout: default
 6. **Pour** oatmeal into prepared dish and bake for 37-40 minutes, or until slightly golden brown and firm in the middle. Then increase heat to 400 degrees F (204 C) and bake 5-8 minutes more to brown the edges and crisp the top. 
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

@@ -34,9 +34,3 @@ layout: default
 3. **Divide muffin mixture** among holes of prepared pans.
 4. **Bake muffins** in oven for about 35 minutes. Stand muffins in pan for a few minutes before turning onto a wire rack.
 
-
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/proteins.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

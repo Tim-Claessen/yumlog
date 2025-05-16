@@ -41,8 +41,3 @@ layout: default
 ***Serving Suggestions:*** *Serve with a rocket (arugula) salad and crusty bread or stir through cooked pasta.*
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

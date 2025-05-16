@@ -44,8 +44,3 @@ layout: default
 13. **Rest on the bench** for a minimum of 1 hour before slicing.
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/proteins.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

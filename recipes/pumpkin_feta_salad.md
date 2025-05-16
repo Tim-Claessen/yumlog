@@ -32,8 +32,3 @@ layout: default
 4. **Combine** the onion, spinach and pesto in a large bowl. Add the pumpkin and gently toss to combine. Crumble feta on top.
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

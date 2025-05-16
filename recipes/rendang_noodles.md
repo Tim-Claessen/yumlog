@@ -38,8 +38,3 @@ layout: default
 6. **Coarsely chop** the cashews and coriander, discarding the coriander stems. Add the noodles and 1tsp white vinegar to the curry and toss to combine. Taste the sauce then season with salt and pepper. Divide the rendang noodles among bowls. Scatter with cashews , coriander and sesame seeds to serve.
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

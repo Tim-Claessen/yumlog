@@ -24,7 +24,3 @@ title: 🔤 A-Z
 - [Sourdough Fruit Bread](../recipes/sourdough_fruit_bread.md)
 - [Toasted Granola](../recipes/toasted_granola.md)
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/proteins.md)  

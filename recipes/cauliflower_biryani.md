@@ -43,9 +43,3 @@ layout: default
 5. **Finish the biryani.** While the biryani is cooking, roughly chop the coriander and roasted almonds. When the rice is done, stir through the almonds, roasted veggies and 1/2 the coriander. 
 6. **Serve up**. Thinly slice the long red chilli (if using). Divide the roast cauliflower biryani between bowls. Top with the Greek-style yoghurt. Sprinkle with the chilli and remaining coriander to serve.
 
-
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

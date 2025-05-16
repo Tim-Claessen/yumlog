@@ -43,8 +43,3 @@ layout: default
 
 > *Source: [https://www.woolworths.com.au/shop/recipes/vegetable-shepherds-pie](https://www.woolworths.com.au/shop/recipes/vegetable-shepherds-pie)
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/proteins.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

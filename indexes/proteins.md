@@ -18,8 +18,3 @@ Browse the protein types below:
 [🍆 Vegetable](./indexes/category_vegetable.md)  
 [🍴 Other](./indexes/category_other.md)  
 
-
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

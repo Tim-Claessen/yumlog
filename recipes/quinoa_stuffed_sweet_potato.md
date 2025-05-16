@@ -39,8 +39,3 @@ layout: default
 6. **Serve** topped with drizzle of natural yoghurt and sprinkle of dukka.
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

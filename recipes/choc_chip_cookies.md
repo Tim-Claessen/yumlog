@@ -45,8 +45,3 @@ layout: default
 
 > *Source: [https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/]([https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/)
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

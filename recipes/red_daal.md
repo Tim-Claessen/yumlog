@@ -44,8 +44,3 @@ layout: default
 
 >*Source: [https://biancazapatka.com/en/red-lentil-dahl/#recipe](https://biancazapatka.com/en/red-lentil-dahl/#recipe)
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)

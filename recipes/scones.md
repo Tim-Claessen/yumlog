@@ -34,8 +34,3 @@ layout: default
 6. **Bake** in oven for 12ish mins. The scones will be ready when they're golden
 
 
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)
