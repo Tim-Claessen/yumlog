@@ -2,10 +2,7 @@
 title: Toasted Granola
 category: "[[sweet]]"
 protein:
-  - Lentils
-  - Tofu
-  - Beans
-  - Eggs
+  - "[[grains_rice]]"
 prep_time_mins: 5
 total_time_mins: 15
 source: https://www.melanieskitchen.co.nz/sarah-days-granola/
