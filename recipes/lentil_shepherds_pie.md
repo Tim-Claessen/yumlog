@@ -1,8 +1,8 @@
 ---
 title: Lentil Shepherd's Pie
-category: Pie
+category: "[[pie]]"
 protein:
-  - Lentils
+  - "[[lentils]]"
 prep_time_mins: 25
 total_time_mins: 75
 source: https://www.woolworths.com.au/shop/recipes/vegetable-shepherds-pie

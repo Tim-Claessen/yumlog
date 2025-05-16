@@ -1,12 +1,13 @@
 ---
 title: Dan Dan Noodles
-category: 
+category: "[[noodles]]"
 protein:
-  - Tofu
-prep_time_mins: 15
+  - "[[tofu]]"
+prep_time_mins: 20
 total_time_mins: 30
-source: e.g. Family Recipe, NYT Cooking
-tags: 
+source: Hello Fresh
+tags:
+  - peanut
 date_created: 2025-05-16
 ---
 

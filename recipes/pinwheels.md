@@ -1,8 +1,8 @@
 ---
 title: Pinwheels
-category: Savoury
+category: "[[savoury]]"
 protein:
-  - Other
+  - "[[other]]"
 prep_time_mins: 10
 total_time_mins: 30
 source: Tahlia Alvin Recipe

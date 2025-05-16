@@ -1,8 +1,8 @@
 ---
 title: Apple Pie Slice
-category: Sweet
+category: "[[sweet]]"
 protein:
-  - Other
+  - "[[other]]"
 prep_time_mins: 10
 total_time_mins: 180
 source: Family Recipe

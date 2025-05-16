@@ -13,7 +13,7 @@ private: true
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Appetisers & Sides"
+WHERE contains(category, "appetisers_sides")
 SORT title ASC
 ```
 
@@ -22,7 +22,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Condiment"
+WHERE contains(category,"condiment")
 SORT title ASC
 ```
 
@@ -58,7 +58,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Main"
+WHERE contains(category,"main")
 SORT title ASC
 ```
 
@@ -67,7 +67,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Noodles"
+WHERE contains(category,"noodles")
 SORT title ASC
 ```
 
@@ -76,7 +76,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Meat"
+WHERE contains(category,"meat")
 SORT title ASC
 ```
 
@@ -85,7 +85,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Pasta"
+WHERE contains(category,"pasta")
 SORT title ASC
 ```
 
@@ -94,7 +94,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Salad"
+WHERE contains(category,"salad")
 SORT title ASC
 ```
 
@@ -103,7 +103,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Savoury"
+WHERE contains(category,"savoury")
 SORT title ASC
 ```
 
@@ -112,7 +112,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Seafood"
+WHERE contains(category,"seafood")
 SORT title ASC
 ```
 
@@ -121,7 +121,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Slow Cooker"
+WHERE contains(category,"slow_cooker")
 SORT title ASC
 ```
 
@@ -130,7 +130,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Sweet"
+WHERE contains(category,"sweet")
 SORT title ASC
 ```
 
@@ -139,7 +139,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)".name + ".md)"
 FROM "recipes"
-WHERE category = "Soup"
+WHERE contains(category,"soup")
 SORT title ASC
 ```
 
@@ -148,7 +148,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Sourdough"
+WHERE cointains(category,"sourdough")
 SORT title ASC
 ```
 
@@ -157,6 +157,6 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE category = "Special Occasion"
+WHERE contains(category,"special_occasion")
 SORT title ASC
 ```

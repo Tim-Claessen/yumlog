@@ -1,8 +1,8 @@
 ---
 title: Eggplant Parmi
-category: Main
+category: "[[main]]"
 protein:
-  - Vegetable
+  - "[[vegetable]]"
 prep_time_mins: 30
 total_time_mins: 75
 source: Family Recipe

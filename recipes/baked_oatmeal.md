@@ -1,8 +1,8 @@
 ---
 title: Baked Oatmeal
-category: Sweet
+category: "[[sweet]]"
 protein:
-  - Other
+  - "[[other]]"
 prep_time_mins: 5
 total_time_mins: 50
 source: Family Recipe

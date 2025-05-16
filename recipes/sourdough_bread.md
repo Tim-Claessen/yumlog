@@ -1,8 +1,8 @@
 ---
 title: Sourdough Bread
-category: Sourdough
+category: "[[sourdough]]"
 protein:
-  - Other
+  - "[[other]]"
 prep_time_mins: 30
 total_time_mins: 720
 source: Family Recipe
