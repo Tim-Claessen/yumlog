@@ -11,7 +11,8 @@ Browse the protein types below:
 [🥣 Lentils](./indexes/category_lentils.md)  
 [🍄 Mushrooms](./indexes/category_mushrooms.md)  
 [🌰 Nuts & Seeds](./indexes/category_nuts_seeds.md)  
-[🍽️ Tofu](./indexes/category_tofu.md) 
+[🍽️ Tofu](./indexes/category_tofu.md)
+[🍆 Vegetable](./indexes/category_vegetable.md)
 
 
 ---

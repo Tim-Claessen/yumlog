@@ -53,6 +53,15 @@ WHERE category = "Grains & Rice"
 SORT title ASC
 ```
 
+# Main
+
+```dataview
+LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
+FROM "recipes"
+WHERE category = "Main"
+SORT title ASC
+```
+
 # Meat
 
 ```dataview

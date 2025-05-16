@@ -79,3 +79,12 @@ FROM "recipes"
 WHERE contains(protein, "Tofu")
 SORT title ASC
 ```
+
+# Tofu
+
+```dataview
+LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
+FROM "recipes"
+WHERE contains(protein, "Vegetable")
+SORT title ASC
+```

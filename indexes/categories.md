@@ -3,11 +3,11 @@
 Browse the recipes by category:
 
 [🥂 Appetisers & Sides](../category/appetisers_sides.md) 
-[🍲 Soup](../category/condiment.md) 
 [🍯 Condiment](../category/condiment.md) 
 [🍛 Curry](../category/curry.md) 
 [🍹 Drink](../category/drink.md) 
 [🍚 Grains & Rice](../category/grains_rice.md) 
+[🍲 Main](../category/main.md) 
 [🍗 Meat](../category/meat.md) 
 [🍝 Pasta](../category/pasta.md) 
 [🥗 Salad](../category/salad.md) 
