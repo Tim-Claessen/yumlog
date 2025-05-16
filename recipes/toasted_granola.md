@@ -2,7 +2,7 @@
 title: Toasted Granola
 category: "[[sweet]]"
 protein:
-  - "[[grains_rice]]"
+  - "[[nuts_seeds]]"
 prep_time_mins: 5
 total_time_mins: 15
 source: https://www.melanieskitchen.co.nz/sarah-days-granola/

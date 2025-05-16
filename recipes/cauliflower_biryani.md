@@ -11,7 +11,7 @@ tags:
 date_created: 2025-05-16
 ---
 
-# Recipe Name
+# Cauliflower Biryani
 
 ## Ingredients
 
@@ -20,7 +20,9 @@ date_created: 2025-05-16
 - 1 carrot
 - ½ brown onion
 - 1 clove garlic
-- Mumbai spice blend
+- 2 tbsp garam masala 
+- 2 tbsp curry powder 
+- 1 pinch ground ginger
 - 1 tablespoon bengal curry paste
 - 1½ cups basmati rice
 - 20g currants
