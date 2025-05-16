@@ -11,6 +11,7 @@ tags:
   - feta
   - pumpkin
 date_created: 2025-05-16
+layout: default
 ---
 
 # Pumpkin Feta Salad

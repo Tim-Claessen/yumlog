@@ -10,6 +10,7 @@ tags:
   - SweetPotato
   - Quinoa
 date_created: 2025-05-16
+layout: default
 ---
 
 # Quinoa Stuffed Sweet Potato

@@ -9,6 +9,7 @@ source: https://www.woolworths.com.au/shop/recipes/vegetable-shepherds-pie
 tags:
   - hearty
 date_created: 2025-05-11
+layout: default
 ---
 
 # Lentil Shepherd's Pie

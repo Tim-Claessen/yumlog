@@ -1,3 +1,9 @@
+---
+title: 🍽️ Welcome to Yumlog
+layout: 
+---
+
+
 # 🍽️ Welcome to Yumlog
 
 **Yumlog** is a cookbook built to collect the foods we love making. Filled with delicious recipes, carefully categorised and easy to browse. Whether you're baking bread, simmering a curry, or whipping up a quick stir-fry, there's something here for every kind of cook.

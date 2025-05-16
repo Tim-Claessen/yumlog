@@ -11,6 +11,7 @@ total_time_mins: 30
 source: e.g. Family Recipe, NYT Cooking
 tags: 
 date_created: "{{date}}"
+layout: default
 ---
 
 # Recipe Name
