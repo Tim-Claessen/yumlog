@@ -1,57 +1,93 @@
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>{{ page.title | default: site.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      color-scheme: light dark;
+      /* Core palette */
+      --color-primary: #8D6E63;    /* Mocha Brown */
+      --color-secondary: #D7CCC8;  /* Oat Milk */
+      --color-accent: #F4A261;     /* Burnt Orange */
+      --color-highlight: #9E9E9E;  /* Stone Gray */
+
+      /* Light mode specifics */
+      --bg-light: #FDF6F0;         /* light warm background */
+      --text-light: #1E1E1E;       /* dark charcoal text */
+      --card-light: var(--color-secondary); /* oat milk as card background */
     }
-  
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* Dark mode specifics */
+        --bg-dark: #121212;
+        --text-dark: #E0E0E0;
+        --card-dark: #1E1E1E;
+      }
+    }
+
+    /* Base styles */
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", sans-serif;
       margin: 2rem auto;
       padding: 0 1rem;
       max-width: 700px;
       line-height: 1.6;
-      background-color: #fff;
-      color: #222;
+      background-color: var(--bg-light, #fff);
+      color: var(--text-light, #222);
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-  
-    h1, h2, h3 {
-      color: #222;
+
+    /* Dark mode override */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+      }
     }
-  
+
+    /* Headings */
+    h1,
+    h2,
+    h3 {
+      color: var(--color-primary);
+    }
+
+    /* Links */
     a {
-      color: #007acc;
+      color: var(--color-primary);
       text-decoration: none;
     }
-  
+
     a:hover {
+      color: var(--color-accent);
       text-decoration: underline;
     }
-  
+
+    /* Navigation */
     nav {
       margin-bottom: 2rem;
     }
-  
+
+    /* Footer */
     footer {
       margin-top: 3rem;
       padding-top: 1rem;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid var(--color-highlight);
       font-size: 0.9rem;
-      color: #666;
+      color: var(--color-highlight);
     }
-  
+
     footer .signoff {
       margin-top: 1rem;
       font-size: 0.85rem;
       text-align: center;
     }
-  
+
+    /* Buttons */
     .home-btn {
-      background-color: #007acc;
+      background-color: var(--color-primary);
       color: white;
       border: none;
       padding: 0.5rem 1rem;
@@ -59,39 +95,57 @@
       cursor: pointer;
       font-size: 1rem;
       text-decoration: none;
+      transition: background-color 0.3s ease;
     }
-  
+
     .home-btn:hover {
-      background-color: #005fa3;
+      background-color: var(--color-accent);
+      color: white;
     }
-  
+
+    /* Card or container styles (if any in future) */
+    .card {
+      background-color: var(--card-light);
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--color-highlight);
+      margin-bottom: 1.5rem;
+      color: var(--text-light);
+    }
+
     @media (prefers-color-scheme: dark) {
-      body {
-        background-color: #121212;
-        color: #ddd;
+      .card {
+        background-color: var(--card-dark);
+        color: var(--text-dark);
+        border-color: var(--color-highlight);
       }
-  
-      h1, h2, h3 {
-        color: #ddd;
-      }
-  
-      a {
-        color: #66aaff;
-      }
-  
+
       footer {
-        border-top-color: #444;
-        color: #bbb;
+        border-top-color: var(--color-highlight);
+        color: var(--color-highlight);
       }
-  
-      .home-btn {
-        background-color: #3399ff;
-        color: white;
-      }
-  
-      .home-btn:hover {
-        background-color: #1a73e8;
-      }
+    }
+
+    /* Lists in footer - remove bullet and set spacing */
+    footer nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    footer nav ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer nav ul li a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    footer nav ul li a:hover {
+      color: var(--color-accent);
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -104,13 +158,13 @@
 
   <footer>
     <nav>
-    <ul style="list-style:none; padding:0; margin:0; font-size: 1rem;">
-      <li>📁 <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a></li>
-      <li>🏷️ <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a></li>
-      <li>🔤 <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a></li>
-    </ul>
-  </nav>
-  <div class="signoff">Made with 🧡 by Tim &amp; Zoe</div>
+      <ul>
+        <li>📁 <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a></li>
+        <li>🏷️ <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a></li>
+        <li>🔤 <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a></li>
+      </ul>
+    </nav>
+    <div class="signoff">Made with 🧡 by Tim &amp; Zoe</div>
   </footer>
 </body>
 </html>
