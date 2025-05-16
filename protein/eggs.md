@@ -1,4 +1,4 @@
-# 🐟 Seafood
+# 🥚 Eggs
 
 ⏳ This page is still simmering 🍳
 

@@ -1,4 +1,4 @@
-# 🐟 Seafood
+# 🌾 Chickpeas
 
 ⏳ This page is still simmering 🍳
 

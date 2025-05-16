@@ -14,21 +14,13 @@ Browse the recipes by category:
 [🍮 Pie](../category/pie.md)  
 [🥗 Salad](../category/salad.md)  
 [🐟 Seafood](../category/seafood.md)  
-[🕰️ Slow Cooker](../category/slow_cooker.md)  
 [🥖 Savoury Treat](../category/savoury.md)  
-[🍪 Sweet Treat](../category/sweet.md)  
+[🕰️ Slow Cooker](../category/slow_cooker.md)  
 [🥘 Soup](../category/soup.md)  
 [🍞 Sourdough](../category/sourdough.md)  
+[🍪 Sweet Treat](../category/sweet.md)  
 [🎉 Special Occasion](../category/special_occasion.md)  
 
-
-⌛ *Coming soon…*
-
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/proteins.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)
 
 ---
 

@@ -1,4 +1,4 @@
-# 🐟 Seafood
+# 🥘 Soup
 
 ⏳ This page is still simmering 🍳
 
