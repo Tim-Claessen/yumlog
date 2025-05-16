@@ -13,7 +13,7 @@ private: true
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Beans")
+WHERE contains(protein,[[beans]])
 SORT title ASC
 ```
 
@@ -22,7 +22,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Cheese")
+WHERE contains(protein,[[cheese]])
 SORT title ASC
 ```
 
@@ -31,7 +31,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Chickpea")
+WHERE contains(protein,[[chickpea]])
 SORT title ASC
 ```
 
@@ -40,7 +40,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Eggs")
+WHERE contains(protein,[[eggs]])
 SORT title ASC
 ```
 
@@ -49,7 +49,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Lentils")
+WHERE contains(protein,[[lentils]])
 SORT title ASC
 ```
 
@@ -58,7 +58,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Mushroom")
+WHERE contains(protein,[[mushroom]])
 SORT title ASC
 ```
 
@@ -67,7 +67,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Nuts & Seeds")
+WHERE contains(protein,[[nuts_seeds]])
 SORT title ASC
 ```
 
@@ -76,7 +76,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Tofu")
+WHERE contains(protein,[[tofu]])
 SORT title ASC
 ```
 
@@ -85,7 +85,7 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Vegetable")
+WHERE contains(protein,[[vegetable]])
 SORT title ASC
 ```
 
@@ -94,6 +94,6 @@ SORT title ASC
 ```dataview
 LIST WITHOUT ID "[" + title + "]" + "(../recipes/" + file.name + ".md)"
 FROM "recipes"
-WHERE contains(protein, "Other")
+WHERE contains(protein,[[other]])
 SORT title ASC
 ```
