@@ -4,22 +4,32 @@
   <meta charset="UTF-8" />
   <title>{{ page.title | default: site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Site-wide styles -->
   <style>
     :root {
+      /* Brand colors */
       --color-primary: #8D6E63;
       --color-secondary: #D7CCC8;
       --color-accent: #F4A261;
       --color-highlight: #9E9E9E;
+
+      /* Light mode */
       --bg-light: #FDF6F0;
       --text-light: #1E1E1E;
       --card-bg-light: var(--color-secondary);
+
+      /* Dark mode */
       --bg-dark: #121212;
       --text-dark: #E0E0E0;
       --card-bg-dark: #1E1E1E;
+
+      /* Header background colors */
       --header-bg-light: var(--color-primary);
       --header-bg-dark: #5C4B44;
     }
 
+    /* Base styling */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
       margin: 0 auto;
@@ -48,6 +58,7 @@
       text-decoration: underline;
     }
 
+    /* Full-width header bar */
     header {
       background-color: var(--header-bg-light);
       color: white;
@@ -59,9 +70,10 @@
       margin-right: -50vw;
       padding: 0.5rem 0;
       box-sizing: border-box;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
+    /* Inner layout of header */
     .header-inner {
       max-width: 900px;
       margin: 0 auto;
@@ -77,12 +89,14 @@
       margin-right: 3rem;
       flex-shrink: 0;
       cursor: pointer;
-      color: white;
+      color: white; /* Ensure white title text */
     }
 
     nav.header-nav {
       display: flex;
       gap: 2rem;
+      flex-grow: 1;
+      justify-content: flex-end; /* Right-align buttons */
       align-items: center;
     }
 
@@ -96,6 +110,7 @@
       color: var(--color-accent);
     }
 
+    /* Search box styling */
     .search-placeholder {
       margin-left: 2rem;
       padding: 0.3rem 0.7rem;
@@ -107,10 +122,12 @@
       font-size: 1rem;
       cursor: text;
       user-select: none;
+      flex-shrink: 0;
       min-width: 140px;
-      text-align: left;
+      text-align: left; /* Left-align placeholder text */
     }
 
+    /* Footer styling */
     footer {
       margin-top: 3rem;
       padding-top: 1rem;
@@ -147,22 +164,11 @@
       color: var(--color-highlight);
     }
 
+    /* Dark mode overrides */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: var(--bg-dark);
         color: var(--text-dark);
-      }
-
-      h1, h2, h3 {
-        color: var(--color-primary);
-      }
-
-      a {
-        color: var(--color-primary);
-      }
-
-      a:hover {
-        color: var(--color-accent);
       }
 
       header {
@@ -170,55 +176,40 @@
         color: var(--text-dark);
       }
 
-      nav.header-nav a {
-        color: var(--text-dark);
-      }
-
-      nav.header-nav a:hover {
-        color: var(--color-accent);
-      }
-
+      nav.header-nav a,
       .search-placeholder {
-        border-color: var(--text-dark);
         color: var(--text-dark);
+        border-color: var(--text-dark);
       }
 
-      footer {
-        border-top-color: var(--color-highlight);
-        color: var(--color-highlight);
-      }
-
-      footer nav ul li a {
-        color: var(--color-primary);
-      }
-
-      footer nav ul li a:hover {
-        color: var(--color-accent);
-      }
-
+      footer,
       footer .signoff {
         color: var(--color-highlight);
+        border-top-color: var(--color-highlight);
       }
     }
   </style>
 </head>
 <body>
+  <!-- Site header -->
   <header>
     <div class="header-inner">
       <h1 onclick="location.href='{{ site.baseurl }}/';" tabindex="0" role="link" aria-label="Go to homepage">Yumlog</h1>
-      <div style="display: flex; align-items: center; gap: 2rem;">
-        <nav class="header-nav" aria-label="Primary navigation">
-          <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
-          <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
-          <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
-        </nav>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
+        <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
+        <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
         <div class="search-placeholder" aria-label="Search placeholder" tabindex="0">Search...</div>
-      </div>
+      </nav>
     </div>
   </header>
 
-  {{ content }}
+  <!-- Main page content -->
+  <main>
+    {{ content }}
+  </main>
 
+  <!-- Site footer -->
   <footer>
     <nav>
       <ul>
