@@ -27,10 +27,10 @@ date_created: 2025-05-12
 
 ## Instructions
 
-1.       **Preheat oven** to 180°. Grease 6 hole Texas muffin pan or spray 6 large disposable muffin cases and place on an oven tray.
-2.       **Sift flour** into large bowl; add sugar then combine extract, egg, butter, milk and rind. Add berries and stir thorough gently.
-3.       **Divide muffin mixture** among holes of prepared pans.
-4.       **Bake muffins** in oven for about 35 minutes. Stand muffins in pan for a few minutes before turning onto a wire rack.
+1. **Preheat oven** to 180°. Grease 6 hole Texas muffin pan or spray 6 large disposable muffin cases and place on an oven tray.
+2. **Sift flour** into large bowl; add sugar then combine extract, egg, butter, milk and rind. Add berries and stir thorough gently.
+3. **Divide muffin mixture** among holes of prepared pans.
+4. **Bake muffins** in oven for about 35 minutes. Stand muffins in pan for a few minutes before turning onto a wire rack.
 
 
 ---
