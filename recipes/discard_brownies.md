@@ -15,10 +15,10 @@ layout: default
 
 ## Ingredients
 
-- 8 tablespoons (113 g) unsalted butter  
-- 12 oz. (340 g) chocolate chips  
-- ½ cup (40 g) cocoa powder
-- 2 teaspoons (10 g) vanilla extract  
+- 112.5 g unsalted butter  
+- 340 g chocolate chips  
+- 40 g cocoa powder
+- 10 g vanilla extract  
 - 2 large eggs  
 - 1 egg yolk  
 - 1 cup (200 g) granulated sugar  
