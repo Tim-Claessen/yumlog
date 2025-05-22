@@ -38,4 +38,3 @@ layout: default
 7. **Bake** for 35–40 minutes, until set in the centre.
 8. **Cool** completely in the pan. Lift out using parchment and cut into squares.
 
-*Source: https://littlespoonfarm.com/sourdough-brownies-recipe/#recipe *
