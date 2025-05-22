@@ -29,7 +29,7 @@ layout: default
 6. **Bake** again for 20–50 more minutes until golden brown. Check after 20 minutes to prevent overbaking.
 7. **Cool** completely before breaking into squares.
 
-Suggested toppings:
+**Suggested toppings:**
 - Salt & rosemary
 - Cheese / feta
 - Everything bagel seasoning
