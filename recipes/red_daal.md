@@ -42,5 +42,5 @@ layout: default
 3. **Cook** covered for 8-10 minutes, or until the lentils have absorbed most of the liquid.
 4. **Add** the coconut milk and strained tomatoes (if using) and simmer another 5-10 minutes, or until the lentils are tender. (If the sauce is too thick, add a little more broth or coconut milk, until the desired consistency is reached). Season with salt, pepper, coconut sugar, and lime juice to taste.
 
-*Source: [https://biancazapatka.com/en/red-lentil-dahl/#recipe](https://biancazapatka.com/en/red-lentil-dahl/#recipe)
+*Source: [https://biancazapatka.com/en/red-lentil-dahl/#recipe](https://biancazapatka.com/en/red-lentil-dahl/#recipe) *
 

@@ -36,6 +36,6 @@ layout: default
 3. Add dry ingredients to the wet ingredients - should be clumpy if not, add more coconut oil.
 4. Put on a tray and bake for around 8 minutes , cool completely and the store in an airtight container.
 
-*Source: [https://www.melanieskitchen.co.nz/sarah-days-granola/](https://www.melanieskitchen.co.nz/sarah-days-granola/)
+*Source: [https://www.melanieskitchen.co.nz/sarah-days-granola/](https://www.melanieskitchen.co.nz/sarah-days-granola/) *
 
 

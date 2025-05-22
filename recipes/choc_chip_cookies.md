@@ -43,5 +43,5 @@ layout: default
 
 ***Note:** Do not over bake. When you remove the cookies from the oven they will still look doughy. THIS is the secret that makes these cookies so absolutely amazing! Please, I beg you, do NOT over bake!*
 
-*Source: [https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/]([https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/)
+*Source: [https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/]([https://joyfoodsunshine.com/the-most-amazing-chocolate-chip-cookies/) *
 
