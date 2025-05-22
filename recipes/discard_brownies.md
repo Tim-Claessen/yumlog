@@ -21,15 +21,15 @@ layout: default
 - 10 g vanilla extract  
 - 2 large eggs  
 - 1 egg yolk  
-- 1 cup (200 g) granulated sugar  
-- ½ cup (110 g) dark brown sugar  
-- ½ cup (125 g) sourdough starter discard  
-- 1 cup (120 g) all-purpose flour  
-- 1 teaspoon (5 g) salt
+- 200 g granulated sugar  
+- 110 g dark brown sugar  
+- 125 g sourdough starter discard  
+- 120 g all-purpose flour  
+- 5 g salt
 
 ## Instructions
 
-1. **Preheat** oven to 350°F (176°C) and line a 9" x 9" baking dish with parchment paper.
+1. **Preheat** oven to 160°C and line a 9" x 9" baking dish with parchment paper.
 2. **Melt** the butter in a saucepan over low heat. Add chocolate chips, cocoa powder, and vanilla. Stir until smooth. Remove from heat and let cool slightly.
 3. **Beat** eggs, granulated sugar, and brown sugar in a large bowl with an electric mixer for 7–10 minutes until light and fluffy.
 4. **Combine** chocolate mixture and sourdough discard into the egg mixture. Mix on low until just combined.

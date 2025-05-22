@@ -10,6 +10,8 @@ title: 🔤 A-Z
 - [Cauliflower Biryani](../recipes/cauliflower_biryani.md)
 - [Choc Chip Cookies](../recipes/choc_chip_cookies.md)
 - [Dan Dan Noodles](../recipes/dan_dan_noodles.md)
+- [Discard Brownies](../recipes/discard_brownies.md)
+- [Discard Crackers](../recipes/discard_crackers.md)
 - [Eggplant Parmi](../recipes/eggplant_parmi.md)
 - [Lentil Shepherd's Pie](../recipes/lentil_shepherds_pie.md)
 - [Mixed Berry Muffins](../recipes/mixed_berry_muffins.md)
