@@ -33,5 +33,3 @@ Suggested toppings:
 - Salt & rosemary
 - Cheese / feta
 - Everything bagel seasoning
-
-> *Source: https://littlespoonfarm.com/sourdough-discard-crackers/#recipe
