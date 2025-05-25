@@ -24,7 +24,7 @@ layout: default
 - 1/4 cup sunflower oil
 - 4 Tbs soy sauce
 - 2 Tbs lemon juice
-- 1 crushed garlic clove
+- 1 crushed garlic clove  
 
 ## Instructions
 

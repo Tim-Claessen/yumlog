@@ -26,7 +26,7 @@ layout: default
 - 1/2 cup parsley chopped
 - 1/3 cup finely diced red onion
 - 1/2 of a lime
-- 1/4 cup sunflower seeds
+- 1/4 cup sunflower seeds  
 
 ## Instructions
 

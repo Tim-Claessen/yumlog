@@ -32,7 +32,8 @@ layout: default
 - 1 desert spoon Maldive fish
 - 1 tsp salt
 - 1/2 - 3/4 cup coconut milk
-- 1 tsp lime juice
+- 1 tsp lime juice  
+
 ## Instructions
 
 1. **Soak the cashews** in the warm coconut milk and hot water for at least 30 minutes. Add a litter more hot water if necessary to cover the nuts.

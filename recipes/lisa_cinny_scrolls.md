@@ -36,9 +36,10 @@ layout: default
 - 57g unsalted butter (for the filling)
 
 **Icing**
-- Icing sugar
-- Vanilla 
-- Milk
+- Icing sugar  
+- Vanilla  
+- Milk  
+
 ## Instructions
 
 1. **Mix** warm milk, discard and sugar together in bowl. 
