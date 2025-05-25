@@ -1,11 +1,11 @@
 ---
-title: Chickpea and cauliflower salad
+title: Chickpea and Cauliflower Salad
 category: "[[salad]]"
 protein:
   - "[[chickpeas]]"
 prep_time_mins: 15
 total_time_mins: 30
-source: Main Dinners
+source: Family Recipe
 tags: 
 date_created: 2025-05-24
 layout: default
