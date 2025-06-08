@@ -13,3 +13,4 @@
 - [Scones](../recipes/scones.md)
 - [Sourdough Bread](../recipes/sourdough_bread.md)
 - [Sourdough Fruit Bread](../recipes/sourdough_fruit_bread.md)
+- [Vegemite Scroll](../recipes/vege_scrolls.md)
