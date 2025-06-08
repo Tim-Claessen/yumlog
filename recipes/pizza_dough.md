@@ -10,7 +10,7 @@ tags:
   - pizza
   - italian
 date_created: 2025-05-16
-layout: default
+layout: recipe
 ---
 
 # Pizza Dough

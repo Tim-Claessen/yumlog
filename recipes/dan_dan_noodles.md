@@ -9,7 +9,7 @@ source: Hello Fresh
 tags:
   - peanut
 date_created: 2025-05-16
-layout: default
+layout: recipe
 ---
 
 # Dan Dan Noodles

@@ -9,7 +9,7 @@ source: Jen Jansen
 tags:
   - cashew
 date_created: 2025-05-24
-layout: default
+layout: recipe
 ---
 
 # Cadju Curry

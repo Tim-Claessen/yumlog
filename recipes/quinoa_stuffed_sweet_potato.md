@@ -10,7 +10,7 @@ tags:
   - SweetPotato
   - Quinoa
 date_created: 2025-05-16
-layout: default
+layout: recipe
 ---
 
 # Quinoa Stuffed Sweet Potato

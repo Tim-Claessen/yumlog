@@ -8,7 +8,7 @@ total_time_mins: 60
 source: Family Recipe
 tags: 
 date_created: 2025-05-22
-layout: default
+layout: recipe
 ---
 
 # Discard Crackers

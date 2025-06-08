@@ -9,7 +9,7 @@ source: https://www.melanieskitchen.co.nz/sarah-days-granola/
 tags:
   - breakfast
 date_created: 2025-05-16
-layout: default
+layout: recipe
 ---
 
 # Toasted Granola

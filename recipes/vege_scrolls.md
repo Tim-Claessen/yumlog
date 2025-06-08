@@ -10,7 +10,7 @@ tags:
   - Baking
   - sourdough
 date_created: 2025-06-08
-layout: default
+layout: recipe
 ---
 
 # Vegemite Scroll

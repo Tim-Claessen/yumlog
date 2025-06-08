@@ -10,7 +10,7 @@ tags:
   - breakfast
   - oats
 date_created: 2025-05-16
-layout: default
+layout: recipe
 ---
 
 # Baked Oatmeal

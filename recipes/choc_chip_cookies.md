@@ -11,7 +11,7 @@ tags:
   - cookies
   - chocolate
 date_created: 2025-05-16
-layout: default
+layout: recipe
 ---
 
 # Choc Chip Cookies

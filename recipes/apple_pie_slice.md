@@ -11,7 +11,7 @@ tags:
   - Apple
   - Sweet
 date_created: 2025-05-12
-layout: default
+layout: recipe
 ---
 
 # Apple Pie Slice 

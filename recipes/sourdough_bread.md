@@ -11,7 +11,7 @@ tags:
   - baking
   - bread
 date_created: 2025-05-11
-layout: default
+layout: recipe
 ---
 
 # Sourdough Bread

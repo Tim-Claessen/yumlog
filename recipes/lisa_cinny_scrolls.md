@@ -10,7 +10,7 @@ tags:
   - Baking
   - sourdough
 date_created: 2025-05-24
-layout: default
+layout: recipe
 ---
 
 # Lisa's Cinny Scrolls

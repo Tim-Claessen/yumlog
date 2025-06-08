@@ -8,7 +8,7 @@ total_time_mins: 30
 source: Family Recipe
 tags: 
 date_created: 2025-05-24
-layout: default
+layout: recipe
 ---
 
 # Brown Rice Salad

@@ -8,7 +8,7 @@ total_time_mins: 60
 source: https://littlespoonfarm.com/sourdough-brownies-recipe/#recipe
 tags: 
 date_created: 2025-05-22
-layout: default
+layout: recipe
 ---
 
 # Discard Brownies
