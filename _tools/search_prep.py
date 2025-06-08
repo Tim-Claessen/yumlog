@@ -25,12 +25,10 @@ def read_frontmatter_and_content(filepath):
 
     # Front matter is between --- lines at the top
     fm_match = re.match(r'^---\n(.*?)\n---\n(.*)', content, re.DOTALL)
-    if not fm_match:
-        return None, None
-
+    if not fm_match: 
+      return None, None
     fm_text, body = fm_match.groups()
     frontmatter = yaml.safe_load(fm_text)
-
     # Optionally, strip Markdown syntax for cleaner content here if needed
     # For now, keep raw Markdown body
     return frontmatter, body.strip()
