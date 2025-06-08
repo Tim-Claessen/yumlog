@@ -11,5 +11,3 @@
 - [Discard Crackers](../recipes/discard_crackers.md)  
 - [Lisa's Cinny Scrolls](../recipes/lisa_cinny_scrolls.md)
 - [Vegemite Scroll](../recipes/vege_scrolls.md)
-
-
