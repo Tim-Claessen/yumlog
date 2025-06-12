@@ -22,7 +22,7 @@ Categories where the recipes are still in the oven:
 [🥂 Appetisers & Sides](../category/appetisers_sides.md)  
 [🍯 Condiment](../category/condiment.md)  
 [🍹 Drink](../category/drink.md)  
-[🍚 Grains & Rice](../category/grains_rice.md) 
+[🍚 Grains & Rice](../category/grains_rice.md)  
 [🍗 Meat](../category/meat.md)  
 [🍝 Pasta](../category/pasta.md)  
 [🐟 Seafood](../category/seafood.md)  
