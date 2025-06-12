@@ -39,7 +39,6 @@ def read_frontmatter_and_content(filepath):
 
     return frontmatter, stripped_body
 
-
 def strip_markdown(text):
     """
     Naively strips common Markdown syntax from text for cleaner search indexing.
@@ -60,7 +59,6 @@ def strip_markdown(text):
     text = re.sub(r'>\s?', '', text)                            # blockquotes
     text = re.sub(r'\n{2,}', '\n', text)                        # collapse multiple newlines
     return text.strip()
-
 
 def main():
     """
