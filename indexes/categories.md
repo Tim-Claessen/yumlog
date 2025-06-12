@@ -26,3 +26,4 @@ Browse the recipes by category:
 [🍪 Sweet Treat](../category/sweet.md)  
 [🎉 Special Occasion](../category/special_occasion.md)  
 
+Categories where the recipes are still in the oven:

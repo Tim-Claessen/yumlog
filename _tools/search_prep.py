@@ -77,7 +77,7 @@ def main():
             if fm and fm.get('layout') == 'recipe':
                 recipes.append({
                     'title': fm.get('title', 'No Title'),
-                    'url': fm.get('permalink') or f"/{os.path.relpath(filepath, RECIPES_DIR).replace('.md','/')}",
+                    'url': fm.get('permalink') or f"/recipes/{os.path.relpath(filepath, RECIPES_DIR).replace('.md','/')}",
                     'content': body
                 })
 
