@@ -110,23 +110,6 @@
       color: var(--color-accent);
     }
 
-    /* Search box styling */
-    .search-placeholder {
-      margin-left: 2rem;
-      padding: 0.3rem 0.7rem;
-      border: 1px solid white;
-      border-radius: 4px;
-      background-color: transparent;
-      color: white;
-      font-style: italic;
-      font-size: 1rem;
-      cursor: text;
-      user-select: none;
-      flex-shrink: 0;
-      min-width: 140px;
-      text-align: left; /* Left-align placeholder text */
-    }
-
     /* Footer styling */
     footer {
       margin-top: 3rem;
@@ -164,32 +147,117 @@
       color: var(--color-highlight);
     }
 
-    /*
-    Dark Mode (disabled for now - to re-enable, just uncomment this block).
-    @media (prefers-color-scheme: dark) {
-      body {
-        background-color: var(--bg-dark);
-        color: var(--text-dark);
+    /* Search input box in header */
+    #search-box {
+      margin-left: 1.5rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      border: 1px solid white;
+      background: transparent;
+      color: white;
+      min-width: 140px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+
+    #search-box::placeholder {
+      font-style: italic;
+      color: white;
+      opacity: 0.7;
+    }
+
+    #search-box:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Search results container */
+    #search-results {
+      max-width: 900px;
+      margin: 0 auto 1rem;
+      padding: 0 1rem;
+      color: var(--color-highlight);
+    }
+
+    /* Search results entries */
+    #search-results article {
+      margin-bottom: 1rem;
+    }
+
+    #search-results a {
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    #search-results a:hover,
+    #search-results a:focus {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+
+    #search-results p {
+      margin: 0.2rem 0 0;
+      color: var(--color-highlight);
+      font-size: 0.9rem;
+    }
+
+    #search-results .no-results {
+      font-style: italic;
+      color: var(--color-primary);
+      font-weight: 600;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Hamburger button styling */
+    #hamburger {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    /* Hide nav by default on mobile */
+    @media (max-width: 768px) {
+      nav.header-nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: var(--header-bg-light);
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
       }
 
-      header {
-        background-color: var(--header-bg-dark);
-        color: var(--text-dark);
+      nav.header-nav.show {
+        display: flex;
       }
 
-      nav.header-nav a,
-      .search-placeholder {
-        color: var(--text-dark);
-        border-color: var(--text-dark);
+      #hamburger {
+        display: block;
       }
 
-      footer,
-      footer .signoff {
-        color: var(--color-highlight);
-        border-top-color: var(--color-highlight);
+      .header-inner {
+        flex-wrap: wrap;
+      }
+
+      #search-box {
+        margin-top: 0.5rem;
+        width: 100%;
+        margin-left: 0;
       }
     }
-    */
   </style>
 </head>
 <body>
@@ -197,16 +265,24 @@
   <header>
     <div class="header-inner">
       <h1 onclick="location.href='{{ site.baseurl }}/';" tabindex="0" role="link" aria-label="Go to homepage">Yumlog</h1>
-      <nav class="header-nav" aria-label="Primary navigation">
+
+      <!-- Hamburger Button -->
+      <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+
+      <!-- Navigation Menu -->
+      <nav class="header-nav" id="nav-menu" aria-label="Primary navigation">
         <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
         <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
         <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
       </nav>
+
+      <input type="search" id="search-box" placeholder="Search recipes..." aria-label="Search recipes">
     </div>
   </header>
 
   <!-- Main page content -->
   <main>
+    <div id="search-results" aria-live="polite" aria-atomic="true"></div>
     {{ content }}
   </main>
 
@@ -221,5 +297,92 @@
     </nav>
     <div class="signoff"> - Made with 🧡 by Tim &amp; Zoe - </div>
   </footer>
+  
+  <!-- Hamburger button script-->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+    });
+  </script>
+
+  <!-- Search script-->
+  <script>
+    // Elements
+    const searchBox = document.getElementById('search-box');
+    const resultsContainer = document.getElementById('search-results');
+
+    let recipes = [];
+
+    // Load search data (adjust path to your actual JSON search index)
+    fetch('{{ "/search.json" | relative_url }}')
+      .then(response => response.json())
+      .then(data => {
+        recipes = data;
+      })
+      .catch(() => {
+        resultsContainer.innerHTML = '<p>Failed to load search data.</p>';
+      });
+
+    // Listen for input changes
+    searchBox.addEventListener('input', () => {
+      const query = searchBox.value.trim().toLowerCase();
+
+      if (!query) {
+        resultsContainer.innerHTML = '';
+        return;
+      }
+
+      // Highlight matched term helper function
+      function highlight(text, term) {
+        const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+        return text.replace(regex, '<mark>$1</mark>');
+      }
+
+      // Get snippet around match (max 100 chars)
+      function getSnippet(content, term) {
+        const idx = content.toLowerCase().indexOf(term);
+        if (idx === -1) {
+          return content.substring(0, 100) + (content.length > 100 ? '...' : '');
+        }
+        const snippetLength = 100;
+        const start = Math.max(0, idx - 30);
+        let snippet = content.substring(start, start + snippetLength);
+        if (start > 0) snippet = '...' + snippet;
+        if (start + snippetLength < content.length) snippet += '...';
+        return snippet;
+      }
+
+      // Filter recipes
+      const matches = recipes.filter(recipe =>
+        recipe.title.toLowerCase().includes(query) ||
+        (recipe.content && recipe.content.toLowerCase().includes(query))
+      );
+
+      if (matches.length === 0) {
+        resultsContainer.innerHTML = '<p class="no-results">No results found.</p>';
+        return;
+      }
+
+      // Build HTML with highlighted matches in title and snippet
+      resultsContainer.innerHTML = matches.map(recipe => {
+        const highlightedTitle = highlight(recipe.title, query);
+        const snippet = recipe.content ? getSnippet(recipe.content, query) : '';
+        const highlightedSnippet = highlight(snippet, query);
+
+        return `
+          <article>
+            <a href="${recipe.url}">${highlightedTitle}</a>
+            <p>${highlightedSnippet}</p>
+          </article>
+        `;
+      }).join('');
+    });
+  </script>
+
 </body>
 </html>
