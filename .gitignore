@@ -1,9 +1,9 @@
-# This .gitignore is appropriate for repositories deployed to GitHub Pages and using
-# a Gemfile as specified at https://github.com/github/pages-gem#conventional
-
 # Ignore Obsidian/VS Code settings (safe to regenerate on each device)
 .obsidian/
 .vscode/
+
+# Python venv
+.venv/
 
 # Windows system file
 Thumbs.db
