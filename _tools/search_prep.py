@@ -1,59 +1,81 @@
+#Libraries
 import os
 import re
 import json
-import yaml
+try:
+    import yaml
+except ImportError:
+    print("Missing dependency 'pyyaml'. Please run: pip install pyyaml")
+    exit(1)
 
-RECIPES_DIR = 'recipes'  # directory containing Markdown recipe files
-OUTPUT_FILE = 'search.json' #output filet o store the parsed recipe data in JSON format
+#Define variables
+RECIPES_DIR = 'recipes'
+OUTPUT_FILE = 'search.json'
+
 
 def read_frontmatter_and_content(filepath):
     """
-    Reads a Markdown file and extracts the YAML front matter and the content body.
-    The YAML front matter must be enclosed between '---' lines at the top of the file.
+    Reads a Markdown file and extracts the YAML front matter and content body.
 
     Args:
         filepath (str): Path to the Markdown (.md) file.
 
     Returns:
         tuple:
-            - frontmatter (dict or None): Parsed YAML front matter as a dictionary. 
-              Returns None if no front matter found.
-            - content (str or None): The Markdown content excluding the front matter. 
-              Returns None if no front matter found.
-    """  
+            - frontmatter (dict or None): Parsed front matter dict, or None if absent.
+            - content (str or None): Body text with Markdown stripped, or None if no front matter.
+    """
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Match front matter enclosed in --- at the start of the file
+    # Match YAML front matter at the top of the file
     fm_match = re.match(r'^---\n(.*?)\n---\n(.*)', content, re.DOTALL)
-    if not fm_match: 
-      return None, None
-    
+    if not fm_match:
+        return None, None
+
     fm_text, body = fm_match.groups()
     frontmatter = yaml.safe_load(fm_text)
-  
-    # Return parsed front matter and trimmed content body
-    return frontmatter, body.strip()
+    stripped_body = strip_markdown(body)
+
+    return frontmatter, stripped_body
+
+
+def strip_markdown(text):
+    """
+    Naively strips common Markdown syntax from text for cleaner search indexing.
+
+    Args:
+        text (str): Markdown content.
+
+    Returns:
+        str: Plain text with basic Markdown stripped.
+    """
+    text = re.sub(r'`{1,3}(.*?)`{1,3}', r'\1', text)            # inline/backtick code
+    text = re.sub(r'!\[.*?\]\(.*?\)', '', text)                 # images
+    text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)        # links
+    text = re.sub(r'[*_]{1,3}(.*?)[*_]{1,3}', r'\1', text)       # bold/italic
+    text = re.sub(r'^#+\s*', '', text, flags=re.MULTILINE)      # headings
+    text = re.sub(r'^[-*+]\s+', '', text, flags=re.MULTILINE)   # bullet points
+    text = re.sub(r'^\d+\.\s+', '', text, flags=re.MULTILINE)   # numbered lists
+    text = re.sub(r'>\s?', '', text)                            # blockquotes
+    text = re.sub(r'\n{2,}', '\n', text)                        # collapse multiple newlines
+    return text.strip()
+
 
 def main():
     """
-    Main function to walk through the recipe directory, parse each Markdown file
-    with 'layout: recipe' in the front matter, and output searchable recipe data
-    to a JSON file.
+    Walks through the recipe directory and extracts searchable recipe info into a JSON file.
     """
     recipes = []
 
-    # Recursively walk through the recipes directory
     for root, _, files in os.walk(RECIPES_DIR):
         for filename in files:
-             # Skip non-Markdown files
-            if not filename.endswith('.md'):
+            if not filename.lower().endswith('.md'):
                 continue
 
             filepath = os.path.join(root, filename)
             fm, body = read_frontmatter_and_content(filepath)
-            
-            # Only include files that declare 'layout: recipe'
+
             if fm and fm.get('layout') == 'recipe':
                 recipes.append({
                     'title': fm.get('title', 'No Title'),
@@ -61,11 +83,11 @@ def main():
                     'content': body
                 })
 
-    # Write the results to the output JSON file
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(recipes, f, indent=2, ensure_ascii=False)
 
     print(f"Generated {OUTPUT_FILE} with {len(recipes)} recipes")
+
 
 if __name__ == '__main__':
     main()
