@@ -6,4 +6,3 @@
 - [Mixed Berry Muffins](../recipes/mixed_berry_muffins.md)
 - [Scones](../recipes/scones.md)
 - [Toasted Granola](../recipes/toasted_granola.md)
-

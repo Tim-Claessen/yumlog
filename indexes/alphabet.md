@@ -30,5 +30,3 @@ title: 🔤 A-Z
 - [Sourdough Fruit Bread](../recipes/sourdough_fruit_bread.md)
 - [Toasted Granola](../recipes/toasted_granola.md)
 - [Vegemite Scroll](../recipes/vege_scrolls.md)
-
-

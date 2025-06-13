@@ -86,6 +86,5 @@ def main():
 
     print(f"Generated {OUTPUT_FILE} with {len(recipes)} recipes")
 
-
 if __name__ == '__main__':
     main()

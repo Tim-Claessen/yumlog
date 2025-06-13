@@ -1,4 +1,3 @@
-
 # 🫘 Beans
 
 ⏳ This page is still simmering 🍳
