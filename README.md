@@ -45,6 +45,7 @@ _Note_: Since Yumlog is a static site, no additional setup or dependencies are r
 ## ✅ To-Do List
 
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
+- Handle secret storage better
 - Test and improve automation
 - Provide recipe entry functionality
 - Create webscraping
