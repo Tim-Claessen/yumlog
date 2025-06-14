@@ -9,6 +9,7 @@ Browse the protein types below:
 
 [🧀 Cheese](../protein/cheese.md)  
 [🌾 Chickpeas](../protein/chickpeas.md)  
+[🥚 Eggs](../protein/eggs.md)  
 [🥣 Lentils](../protein/lentils.md)  
 [🌰 Nuts & Seeds](../protein/nuts_seeds.md)  
 [🍽️ Tofu](../protein/tofu.md)  
@@ -18,5 +19,4 @@ Browse the protein types below:
 Protein types where the recipes are still in the oven:
 
 [🫘 Beans](../protein/beans.md)  
-[🥚 Eggs](../protein/eggs.md)  
 [🍄 Mushrooms](../protein/mushrooms.md)  
