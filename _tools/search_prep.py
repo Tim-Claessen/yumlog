@@ -1,3 +1,15 @@
+"""
+search_prep.py
+---------------------
+Script to generate the `search.json` file for client-side website search.
+
+It scans the `recipes/` folder for Markdown recipe files,
+extracts YAML front matter and cleans Markdown content,
+then compiles searchable data (title, URL, content) into a JSON index.
+
+Handles missing dependencies gracefully and outputs the final index as `search.json`.
+"""
+
 #Libraries
 import os
 import re
@@ -12,6 +24,7 @@ except ImportError:
 RECIPES_DIR = 'recipes'
 OUTPUT_FILE = 'search.json'
 
+# ------------------------------------------------------------------------------
 
 def read_frontmatter_and_content(filepath):
     """

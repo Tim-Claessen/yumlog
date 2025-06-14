@@ -5,8 +5,8 @@
 # Python venv
 .venv/
 
-# Service account key
-google_service_account.json
+# Secrets folder
+_secrets/
 
 # Windows system file
 Thumbs.db

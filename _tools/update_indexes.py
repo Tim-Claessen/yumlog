@@ -1,3 +1,16 @@
+"""
+update_indexes.py
+-----------------
+Script to update website index pages for recipes by Category, Protein, and Alphabet.
+
+It reads Markdown recipe files from the `recipes/` folder,
+extracts front matter metadata,
+and generates or updates index markdown files under `indexes/category/`, `indexes/protein/`, and `indexes/alphabet.md`.
+
+Handles existing content preservation and logs progress and errors.
+"""
+
+#Libraries
 import os
 import re
 import yaml
@@ -12,6 +25,8 @@ OUTPUT_DIRS = {
     "category": "category",
     "protein": "protein"
 }
+
+# ------------------------------------------------------------------------------
 
 def extract_yaml_front_matter(filepath):
     """

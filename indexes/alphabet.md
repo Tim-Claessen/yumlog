@@ -7,9 +7,11 @@ title: 🔤 A-Z
 
 - [Apple Pie Slice](../recipes/apple_pie_slice.md)
 - [Baked Oatmeal](../recipes/baked_oatmeal.md)
+- [Boiled Eggs](../recipes/boiled_eggs.md)
 - [Brown Rice Salad](../recipes/brown_rice_salad.md)
 - [Cadju Curry](../recipes/cadju_curry.md)
 - [Cauliflower Biryani](../recipes/cauliflower_biryani.md)
+- [Chia Seed Egg](../recipes/chia_seed_egg.md)
 - [Chickpea and Cauliflower Salad](../recipes/chickpea_and_cauliflower_salad.md)
 - [Choc Chip Cookies](../recipes/choc_chip_cookies.md)
 - [Dan Dan Noodles](../recipes/dan_dan_noodles.md)
