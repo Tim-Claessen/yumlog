@@ -44,12 +44,13 @@ _Note_: Since Yumlog is a static site, no additional setup or dependencies are r
 
 ## ✅ To-Do List
 
+- Update AboutMe for Python stuff
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
 - Handle secret storage better
 - Test and improve automation
-- Provide recipe entry functionality
+- Run scripts through GitHub actions
+- Automate pull request for updates
 - Create webscraping
-- Improve functionality of the A - Z section
 - Include image thumbnails for each recipe
 - Enable filtering (category, protein, cooking time)
 - Add tags/labels for dietary info
