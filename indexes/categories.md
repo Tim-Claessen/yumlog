@@ -15,6 +15,7 @@ Browse the recipes by category:
 [🥖 Savoury Treat](../category/savoury.md)  
 [🍞 Sourdough](../category/sourdough.md)  
 [🍪 Sweet Treat](../category/sweet.md)  
+[❔ Other](../category/other.md)
 
 
 Categories where the recipes are still in the oven:
