@@ -1,6 +1,6 @@
 ---
 title: Boiled Eggs
-category: "[[appetisers_sides]]"
+category: "[[other]]"
 protein:
   - "[[eggs]]"
 prep_time_mins: 3
