@@ -5,6 +5,9 @@
 # Python venv
 .venv/
 
+# Service account key
+google_service_account.json
+
 # Windows system file
 Thumbs.db
 
