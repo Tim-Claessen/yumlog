@@ -6,45 +6,30 @@
 
 Explore by category, protein, or in alphabetical order — and enjoy the simple pleasure of cooking something great.
 
----
-
 ## 📖 Table of Contents
 
 - [Live Site](#live-site)
-- [Getting Started](#getting-started)
+- [Contriutions](#contributions)
 - [To-Do List](#to-do-list)
 - [Credits](#credits)
 - [License](#license)
-
----
+- [Developer Tools](#developer-tools)
 
 ## 🌐 Live Site
 
 Explore our recipes live at: [https://tim-claessen.github.io/yumlog](https://tim-claessen.github.io/yumlog)
 
+## 📬 Contributions
+We’d love to hear what recipes you’ve been cooking! If you have a favourite dish you'd like to share, you can submit it using our Google Form:
 
----
+👉 [Submit a Recipe](forms.gle/Fj8Szehe23sCvq6GA)
 
-## 🚀 Getting Started
+All submissions will be reviewed before being added to the cookbook. Over time, your recipe may appear on the live site once it's been formatted and indexed properly. ✨
 
-To run Yumlog locally:
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/Tim-Claessen/yumlog.git
-   cd yumlog
-```
-
-2. **Open in Browser**:
-    - Simply open `index.html` in your preferred web browser.
-
-_Note_: Since Yumlog is a static site, no additional setup or dependencies are required.
-
----
+>**Note:** Submissions are intended for personal/family favourites — please credit your sources if adapted or inspired by another recipe.
 
 ## ✅ To-Do List
 
-- Update AboutMe for Python stuff
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
 - Handle secret storage better
 - Test and improve automation
@@ -55,14 +40,18 @@ _Note_: Since Yumlog is a static site, no additional setup or dependencies are r
 - Enable filtering (category, protein, cooking time)
 - Add tags/labels for dietary info
 
----
-
 ## 🙏 Credits
 
-A heartfelt thank you to all the chefs, food bloggers, and family members who've inspired these recipes. Detailed acknowledgments can be found in our [Credits](https://github.com/Tim-Claessen/yumlog/blob/main/Credits.md) file.
+A heartfelt thank you to all the chefs, food bloggers, friends who've inspired these recipes. 
 
----
+Also thank you to the develpers who have helped. Detailed acknowledgments for them can be found in our [Credits](https://github.com/Tim-Claessen/yumlog/blob/main/Credits.md) file.
 
 ## 📄 License
 
 This project is licensed under the [MIT License](https://github.com/Tim-Claessen/yumlog/blob/main/LICENSE).
+
+## 🛠️ Developer Tools
+
+The `_tools/` folder contains Python scripts to automate indexing, recipe formatting, and future enhancements like scraping and GitHub automation.
+
+For more details, see the [tools README](https://github.com/Tim-Claessen/yumlog/blob/main/_tools/README.md).
