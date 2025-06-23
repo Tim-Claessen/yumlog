@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run import_from_form.py
-        run: python tools/import_from_form.py
+        run: python _tools/import_from_form.py
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
 
@@ -44,11 +44,11 @@ jobs:
 
       - name: Run search_prep.py
         if: steps.check_changes.outputs.changed == 'true'
-        run: python tools/search_prep.py
+        run: python _tools/search_prep.py
 
       - name: Run update_indexes.py
         if: steps.check_changes.outputs.changed == 'true'
-        run: python tools/update_indexes.py
+        run: python _tools/update_indexes.py
 
       - name: Commit all changes
         if: steps.check_changes.outputs.changed == 'true'
