@@ -22,3 +22,8 @@
 2025-06-14 12:31:39,846 INFO: Last import timestamp: 2025-06-14T12:27:11+08:00
 2025-06-14 12:31:42,535 INFO: Total rows fetched: 2
 2025-06-14 12:31:42,538 INFO: Import completed: 0 recipes processed, 0 skipped. Ensure the index pages and search are updated if new recipes were added.
+2025-06-23 21:44:00,103 INFO: Starting recipe import from Google Sheet
+2025-06-23 21:44:00,111 INFO: Last import timestamp: 2025-06-14T12:27:11+08:00
+2025-06-23 21:44:03,141 INFO: Total rows fetched: 3
+2025-06-23 21:44:03,150 INFO: Row 3 processed: saved 'discard_pikelets.md'
+2025-06-23 21:44:03,150 INFO: Import completed: 1 recipes processed, 0 skipped. Ensure the index pages and search are updated if new recipes were added.
