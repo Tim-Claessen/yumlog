@@ -30,11 +30,9 @@ All submissions will be reviewed before being added to the cookbook. Over time, 
 
 ## ✅ To-Do List
 
+- FIX SCRIPTS - if there is a dud recipe in the forms it'll never push to main and therefore the log of "last checked" will never get updated. Consider moving this log into the Sheet or storing elsewhere.
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
-- Handle secret storage better
 - Test and improve automation
-- Run scripts through GitHub actions
-- Automate pull request for updates
 - Create webscraping
 - Include image thumbnails for each recipe
 - Enable filtering (category, protein, cooking time)
