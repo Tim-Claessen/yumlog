@@ -23,8 +23,8 @@ import pytz
 
 # CONFIGURATION
 
-# Google service account JSON key file path (relative to this script)
-SERVICE_ACCOUNT_FILE = os.path.join(os.path.dirname(__file__), '..', '_secrets', 'google_service_account.json')
+# Google service account JSON key (loaded from GitHub Actions secret or environment)
+SERVICE_ACCOUNT_JSON = os.environ.get('GOOGLE_SERVICE_ACCOUNT_JSON')
 
 # Google Sheet and Worksheet names
 SHEET_NAME = "Yumlog-RecipeUpload"
@@ -170,9 +170,16 @@ def main():
 
     # Authenticate and open Google Sheet
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
-    creds = ServiceAccountCredentials.from_json_keyfile_name(SERVICE_ACCOUNT_FILE, scope)
-    client = gspread.authorize(creds)
+    if SERVICE_ACCOUNT_JSON:
+        # GitHub Actions: parse JSON from environment variable
+        creds_dict = json.loads(SERVICE_ACCOUNT_JSON)
+        creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+    else:
+        # Local run fallback: load from file
+        SERVICE_ACCOUNT_FILE = os.path.join(os.path.dirname(__file__), '..', '_secrets', 'google_service_account.json')
+        creds = ServiceAccountCredentials.from_json_keyfile_name(SERVICE_ACCOUNT_FILE, scope)
 
+    client = gspread.authorize(creds)
     sheet = client.open(SHEET_NAME)
     worksheet = sheet.worksheet(WORKSHEET_NAME)
 
