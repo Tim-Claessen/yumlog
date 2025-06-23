@@ -1,0 +1,76 @@
+name: Process Recipes
+
+on:
+  workflow_dispatch:  # Manual trigger
+  schedule:
+    - cron: '0 16 * * *'  # Every day at 12 AM UTC+8 (Perth time)
+
+jobs:
+  import_and_process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run import_from_form.py
+        run: python tools/import_from_form.py
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+
+      - name: Check for new recipes
+        id: check_changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add recipes/
+          if git diff --cached --quiet; then
+            echo "No new recipes."
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "New recipes found."
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run search_prep.py
+        if: steps.check_changes.outputs.changed == 'true'
+        run: python tools/search_prep.py
+
+      - name: Run update_indexes.py
+        if: steps.check_changes.outputs.changed == 'true'
+        run: python tools/update_indexes.py
+
+      - name: Commit all changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          BRANCH_NAME="new-recipe-submissions-$(date +%s)"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          git checkout -b $BRANCH_NAME
+          git add .
+          git commit -m "📥 New recipes added"
+          git push origin $BRANCH_NAME
+
+      - name: Create Pull Request
+        if: steps.check_changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "📥 New recipes added"
+          branch: ${{ env.BRANCH_NAME }}
+          title: "📥 New recipes added"
+          body: |
+            This PR was auto-generated from new Google Form submissions.
+            It includes:
+            - New recipes in `recipes/`
+            - Updated search data
+            - Updated category/protein indexes
