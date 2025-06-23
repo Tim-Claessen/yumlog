@@ -17,7 +17,6 @@ title: 🔤 A-Z
 - [Dan Dan Noodles](../recipes/dan_dan_noodles.md)
 - [Discard Brownies](../recipes/discard_brownies.md)
 - [Discard Crackers](../recipes/discard_crackers.md)
-- [Discard Pikelets](../recipes/discard_pikelets.md)
 - [Eggplant Parmi](../recipes/eggplant_parmi.md)
 - [Lentil Shepherd's Pie](../recipes/lentil_shepherds_pie.md)
 - [Lisa's Cinny Scrolls](../recipes/lisa_cinny_scrolls.md)
