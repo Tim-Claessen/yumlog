@@ -55,6 +55,9 @@ jobs:
       - name: Commit all changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
+          git fetch origin
+          git checkout main
+          git pull origin main
           git checkout -b $BRANCH_NAME
           git add .
           git commit -m "📥 New recipes added"
