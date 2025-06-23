@@ -8,6 +8,8 @@ on:
 jobs:
   import_and_process:
     runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: new-recipe-submissions-${{ github.run_id }}
 
     steps:
       - name: Checkout repo
@@ -53,20 +55,19 @@ jobs:
       - name: Commit all changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
-          BRANCH_NAME="new-recipe-submissions-$(date +%s)"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
           git checkout -b $BRANCH_NAME
           git add .
           git commit -m "📥 New recipes added"
-          git push origin $BRANCH_NAME
+          git push origin HEAD:$BRANCH_NAME
 
       - name: Create Pull Request
         if: steps.check_changes.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "📥 New recipes added"
+          commit-message: "📥 New recipes added!"
           branch: ${{ env.BRANCH_NAME }}
+          base: main
           title: "📥 New recipes added"
           body: |
             This PR was auto-generated from new Google Form submissions.
