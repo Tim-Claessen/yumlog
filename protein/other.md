@@ -6,7 +6,6 @@
 - [Choc Chip Cookies](../recipes/choc_chip_cookies.md)
 - [Discard Brownies](../recipes/discard_brownies.md)
 - [Discard Crackers](../recipes/discard_crackers.md)
-- [Discard Pikelets](../recipes/discard_pikelets.md)
 - [Lisa's Cinny Scrolls](../recipes/lisa_cinny_scrolls.md)
 - [Mixed Berry Muffins](../recipes/mixed_berry_muffins.md)
 - [Pinwheels](../recipes/pinwheels.md)
