@@ -1,9 +1,9 @@
 name: Process Recipes
 
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
   schedule:
-    - cron: '0 16 * * *'  # Every day at 12 AM UTC+8 (Perth time)
+    - cron: '0 16 * * *'
 
 jobs:
   import_and_process:
@@ -30,13 +30,10 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
 
-      - name: Check for new recipes
+      - name: Detect recipe changes (without staging)
         id: check_changes
         run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@github.com'
-          git add .
-          if git diff --cached --quiet; then
+          if git diff --quiet; then
             echo "No new recipes."
             echo "changed=false" >> $GITHUB_OUTPUT
           else
@@ -51,17 +48,6 @@ jobs:
       - name: Run update_indexes.py
         if: steps.check_changes.outputs.changed == 'true'
         run: python _tools/update_indexes.py
-
-      - name: Commit all changes
-        if: steps.check_changes.outputs.changed == 'true'
-        run: |
-          git fetch origin
-          git checkout main
-          git pull origin main
-          git checkout -b $BRANCH_NAME
-          git add .
-          git commit -m "📥 New recipes added"
-          git push origin HEAD:$BRANCH_NAME
 
       - name: Create Pull Request
         if: steps.check_changes.outputs.changed == 'true'
