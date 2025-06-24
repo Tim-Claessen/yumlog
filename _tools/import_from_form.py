@@ -5,15 +5,13 @@ Script to import new recipe submissions from a Google Sheet (via Google Forms),
 convert each into a Markdown file based on a template,
 and save them into the `recipes/` folder.
 
-It tracks the last import timestamp to avoid duplicates,
-logs successes and skips/errors in `_data/import_log.txt`,
-and is designed for local runs with future GitHub Actions compatibility.
+It tracks the processing in the Google Sheet
+and is designed for local runs or GitHub Actions compatibility.
 """
 
 import os
 import re
 import json
-import logging
 from datetime import datetime
 from pathlib import Path
 
@@ -34,8 +32,6 @@ WORKSHEET_NAME = "FormResponses1"
 REPO_ROOT = Path(__file__).parent.parent
 RECIPES_DIR = REPO_ROOT / 'recipes'
 DATA_DIR = REPO_ROOT / '_data'
-LAST_IMPORT_FILE = DATA_DIR / 'last_import.json'
-LOG_FILE = DATA_DIR / 'import_log.txt'
 
 # Timezone for timestamps
 LOCAL_TZ = pytz.timezone('Australia/Perth')  # GMT+8
@@ -44,35 +40,6 @@ LOCAL_TZ = pytz.timezone('Australia/Perth')  # GMT+8
 ESSENTIAL_FIELDS = ['Recipe Title', 'Ingredients', 'Instructions', 'Category', 'Protein']
 
 # ------------------------------------------------------------------------------
-
-def setup_logging(): 
-    """Setup logging to file and console."""
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s %(levelname)s: %(message)s',
-        handlers=[
-            logging.FileHandler(LOG_FILE, encoding='utf-8'),
-            logging.StreamHandler()
-        ]
-    )
-
-def load_last_import_timestamp() -> datetime: 
-    """Load last import timestamp from JSON file, or return epoch if not found."""
-    if LAST_IMPORT_FILE.exists():
-        with open(LAST_IMPORT_FILE, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            ts = data.get('last_timestamp')
-            if ts:
-                return datetime.fromisoformat(ts).astimezone(LOCAL_TZ)
-    # Default to epoch start (process all if no previous import)
-    return datetime(1970, 1, 1, tzinfo=LOCAL_TZ)
-
-def save_last_import_timestamp(dt: datetime): 
-    """Save last import timestamp (in ISO format) to JSON file."""
-    LAST_IMPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(LAST_IMPORT_FILE, 'w', encoding='utf-8') as f:
-        json.dump({'last_timestamp': dt.isoformat()}, f)
 
 def snake_case_filename(title: str) -> str: 
     """
@@ -83,7 +50,7 @@ def snake_case_filename(title: str) -> str:
     title_snake = re.sub(r'\s+', '_', title_clean.strip().lower())
     return f"{title_snake}.md"
 
-def parse_tags(tags_field: str) -> list[str]: # checked
+def parse_tags(tags_field: str) -> list[str]:
     """
     Parse tags field from form, expecting something like '#tag1 #tag2'
     Returns a list of lowercase tags without '#'.
@@ -161,12 +128,9 @@ def convert_timestamp_to_local(dt_str: str) -> datetime:
     return dt_local
 
 def main():
-    setup_logging()
-    logging.info("Starting recipe import from Google Sheet")
+    print("Starting recipe import from Google Sheet")
 
-    # Load last import timestamp
-    last_import = load_last_import_timestamp()
-    logging.info(f"Last import timestamp: {last_import.isoformat()}")
+    updates = []
 
     # Authenticate and open Google Sheet
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
@@ -184,33 +148,39 @@ def main():
     worksheet = sheet.worksheet(WORKSHEET_NAME)
 
     rows = worksheet.get_all_records()
-    logging.info(f"Total rows fetched: {len(rows)}")
-
-    # Keep track of the newest timestamp we process
-    max_timestamp = last_import
+    print(f"Total rows fetched: {len(rows)}")
+    headers = worksheet.row_values(1)
+   
+   #Grab 'processed' column to track changes
+    if 'Processed' not in headers:
+        worksheet.update_cell(1, len(headers) + 1, 'Processed')
+        headers.append('Processed')   
+    processed_col_index = headers.index('Processed') + 1
 
     processed_count = 0
     skipped_count = 0
 
     for idx, row in enumerate(rows, 1):
         try:
-            ts_raw = row.get('Timestamp')
-            if not ts_raw:
-                logging.warning(f"Row {idx} skipped: Missing timestamp")
+            # Skip if already processed
+            processed_raw = row.get('Processed')
+
+            if processed_raw == 'Yes':
                 skipped_count += 1
+                updates.append({'range': f"{gspread.utils.rowcol_to_a1(idx + 1, processed_col_index)}", 'values': [['Yes']]})
                 continue
 
-            timestamp = convert_timestamp_to_local(ts_raw)
-
-            # Skip if before or equal to last import
-            if timestamp <= last_import:
+            if processed_raw == 'Skipped':
+                skipped_count += 1
+                updates.append({'range': f"{gspread.utils.rowcol_to_a1(idx + 1, processed_col_index)}", 'values': [['Skipped']]})
                 continue
 
             # Check essential fields
             missing_essentials = [field for field in ESSENTIAL_FIELDS if not row.get(field)]
             if missing_essentials:
-                logging.warning(f"Row {idx} skipped: missing essential fields {missing_essentials}")
+                print(f"Row {idx} skipped: missing essential fields {missing_essentials}")
                 skipped_count += 1
+                updates.append({'range': f"{gspread.utils.rowcol_to_a1(idx + 1, processed_col_index)}", 'values': [['Skipped']]})
                 continue
 
             # Prepare recipe dict from row
@@ -222,7 +192,7 @@ def main():
                 'total_time_mins': int(row.get('Total Time (in minutes)', 0) or 0),
                 'source': row.get('Source of recipe', '').strip(),
                 'tags': parse_tags(row.get('Tags', '')),
-                'date_created': timestamp.strftime('%Y-%m-%d'),
+                'date_created': datetime.now(LOCAL_TZ).strftime('%Y-%m-%d'),
                 'ingredients': [line.strip() for line in row.get('Ingredients', '').splitlines() if line.strip()],
                 'instructions': [line.strip() for line in row.get('Instructions', '').splitlines() if line.strip()],
             }
@@ -231,28 +201,33 @@ def main():
             filename = snake_case_filename(recipe['title'])
             filepath = RECIPES_DIR / filename
 
+            if filepath.exists():
+                print(f"Warning: '{filename}' already exists. Skipping to avoid overwrite.")
+                skipped_count += 1
+                updates.append({'range': f"{gspread.utils.rowcol_to_a1(idx + 1, processed_col_index)}", 'values': [['Skipped']]})
+                continue
+
             # Save markdown file
             RECIPES_DIR.mkdir(parents=True, exist_ok=True)
             md_content = format_markdown(recipe)
             with open(filepath, 'w', encoding='utf-8') as f_md:
                 f_md.write(md_content)
 
-            logging.info(f"Row {idx} processed: saved '{filename}'")
+            print(f"Row {idx} processed: saved '{filename}'")
             processed_count += 1
 
-            # Update max_timestamp for last import
-            if timestamp > max_timestamp:
-                max_timestamp = timestamp
+            # Mark record as 'Processed'
+            updates.append({'range': f"{gspread.utils.rowcol_to_a1(idx + 1, processed_col_index)}", 'values': [['Yes']]})
 
         except Exception as e:
-            logging.error(f"Row {idx} error: {e}", exc_info=True)
+            print(f"Row {idx} error: {e}")
+            updates.append({'range': f"{gspread.utils.rowcol_to_a1(idx + 1, processed_col_index)}", 'values': [['Skipped']]})
             skipped_count += 1
             continue
-
-    # Save updated last import timestamp
-    save_last_import_timestamp(max_timestamp)
-
-    logging.info(f"Import completed: {processed_count} recipes processed, {skipped_count} skipped. Ensure the index pages and search are updated if new recipes were added.")
+    
+    if updates:
+        worksheet.batch_update(updates)
+    print(f"Import completed: {processed_count} recipes processed, {skipped_count} skipped. Ensure the index pages and search are updated if new recipes were added.")
 
 if __name__ == "__main__":
     main()
