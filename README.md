@@ -9,7 +9,7 @@ Explore by category, protein, or in alphabetical order — and enjoy the simple 
 ## 📖 Table of Contents
 
 - [Live Site](#live-site)
-- [Contriutions](#contributions)
+- [Contributions](#contributions)
 - [To-Do List](#to-do-list)
 - [Credits](#credits)
 - [License](#license)
@@ -30,7 +30,6 @@ All submissions will be reviewed before being added to the cookbook. Over time, 
 
 ## ✅ To-Do List
 
-- FIX SCRIPTS - if there is a dud recipe in the forms it'll never push to main and therefore the log of "last checked" will never get updated. Consider moving this log into the Sheet or storing elsewhere.
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
 - Test and improve automation
 - Create webscraping
