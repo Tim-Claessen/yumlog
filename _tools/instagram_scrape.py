@@ -5,6 +5,8 @@ L = instaloader.Instaloader(download_comments=False, save_metadata=False, post_m
 
 L.login('tim_claessen_', 'Jenae41103!')  # Save your credentials or use .load_session_from_file
 
-# Download posts from profile
-username = "__tablemanners__"
-L.download_profile(username, profile_pic=False, fast_update=True, download_stories=False)
+# Target profile to scrape
+target_profile = "__tablemanners__"
+
+# Download posts (safely - without fast_update)
+L.download_profile(target_profile, profile_pic=False, download_stories=False)
