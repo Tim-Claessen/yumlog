@@ -8,10 +8,10 @@ total_time_mins: 3
 source: https://www.instagram.com/__tablemanners__/
 tags: 
 date_created: 2025-06-25
-layout: default
+layout: recipe
 ---
 
-# Recipe Name
+# Whiskey Sour
 
 ## Ingredients
 
@@ -28,4 +28,4 @@ layout: default
 2. **Add** all ingredients to shaker with a handful of ice
 3. **Shake** thoroughly
 4. **Pour** into glass, keeping the ice in the shaker
-5. Add a dash of bitt
+5. **Top** with a dash of bitters

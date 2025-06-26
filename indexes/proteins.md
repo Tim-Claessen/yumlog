@@ -7,6 +7,7 @@ title: 🏷️ Browse by Protein
 
 Browse the protein types below:
 
+[🫘 Beans](../protein/beans.md)  
 [🧀 Cheese](../protein/cheese.md)  
 [🌾 Chickpeas](../protein/chickpeas.md)  
 [🥚 Eggs](../protein/eggs.md)  
@@ -18,5 +19,4 @@ Browse the protein types below:
 
 Protein types where the recipes are still in the oven:
 
-[🫘 Beans](../protein/beans.md)  
 [🍄 Mushrooms](../protein/mushrooms.md)  
