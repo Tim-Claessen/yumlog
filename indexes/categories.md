@@ -7,6 +7,7 @@ title: 📁 Browse by Category
 
 Browse the recipes by category:
 
+[🍯 Condiment](../category/condiment.md)  
 [🍛 Curry](../category/curry.md)   
 [🍹 Drink](../category/drink.md)  
 [🍲 Main](../category/main.md)   
@@ -23,7 +24,6 @@ Browse the recipes by category:
 Categories where the recipes are still in the oven:
 
 [🥂 Appetisers & Sides](../category/appetisers_sides.md)  
-[🍯 Condiment](../category/condiment.md)  
 [🍚 Grains & Rice](../category/grains_rice.md)  
 [🍗 Meat](../category/meat.md)  
 [🍝 Pasta](../category/pasta.md)  
