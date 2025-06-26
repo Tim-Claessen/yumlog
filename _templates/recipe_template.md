@@ -1,17 +1,15 @@
 ---
 title: Recipe Name
-category: Bread
+category: "[[sourdough]]"
 protein:
-  - Lentils
-  - Tofu
-  - Beans
-  - Eggs
+  - "[[lentils]]"
+  - "[[beans]]"
 prep_time_mins: 15
 total_time_mins: 30
 source: e.g. Family Recipe, NYT Cooking
 tags: 
 date_created: "{{date}}"
-layout: default
+layout: recipe
 ---
 
 # Recipe Name
@@ -25,10 +23,3 @@ layout: default
 
 1. Step one
 2. Step two
-
-
----
-
-📁 [Browse by Category](../indexes/categories.md)  
-🏷️ [Browse by Protein](../indexes/protein.md)  
-🔤 [A–Z Index](../indexes/alphabet.md)
