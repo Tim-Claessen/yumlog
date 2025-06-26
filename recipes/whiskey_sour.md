@@ -2,7 +2,7 @@
 title: Whiskey Sour
 category: "[[drink]]"
 protein:
-  - "[[protein/other|other]]"
+  - "[[other]]"
 prep_time_mins: 3
 total_time_mins: 3
 source: https://www.instagram.com/__tablemanners__/

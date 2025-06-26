@@ -2,7 +2,7 @@
 title: Green Goddess Dressing
 category: "[[condiment]]"
 protein:
-  - "[[protein/other|other]]"
+  - "[[other]]"
 prep_time_mins: 10
 total_time_mins: 10
 source: ChatGPT

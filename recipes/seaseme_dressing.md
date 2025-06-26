@@ -2,7 +2,7 @@
 title: Japanese Sesame Dressing
 category: "[[condiment]]"
 protein:
-  - "[[protein/other|other]]"
+  - "[[other]]"
 prep_time_mins: 5
 total_time_mins: 5
 source: ChatGPT

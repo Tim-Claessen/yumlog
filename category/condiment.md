@@ -1,6 +1,6 @@
 # 🍯 Condiment
 
-⏳ This page is still simmering 🍳
-
-Oops! Looks like this page isn’t complete yet. But don’t worry — good things take time to cook.
-
+- [Green Goddess Dressing](../recipes/garden_goodness.md)
+- [Honey Mustard Dressing](../recipes/honey_mustard_dressing.md)
+- [Hummus](../recipes/hummus.md)
+- [Japanese Sesame Dressing](../recipes/seaseme_dressing.md)

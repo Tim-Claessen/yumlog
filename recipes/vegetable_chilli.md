@@ -2,8 +2,8 @@
 title: Vegetable Chilli
 category: "[[slow_cooker]]"
 protein:
-  - "[[protein/beans|beans]]"
-  - "[[protein/lentils|lentils]]"
+  - "[[beans]]"
+  - "[[lentils]]"
 prep_time_mins: 20
 total_time_mins: 480
 source: ChatGPT
