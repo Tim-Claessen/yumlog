@@ -23,10 +23,9 @@ layout: recipe
 - 1 tbsp lemon juice
 - 1 clove garlic (crushed)
 - Salt & pepper to taste
-- Paprika to top
 
 ## Instructions
 
-1. **Add** all ingredients to blender
-2. **Blend** until desired texture
-3. **Serve** in bowl
+1. **Add** all ingredients to blender.
+2. **Blend** until desired texture & season to taste.
+3. **Serve** in bowl with your favourite chips, breads, or vegetables.
