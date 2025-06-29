@@ -2,3 +2,4 @@ pyyaml
 gspread
 oauth2client
 pytz
+pillow
