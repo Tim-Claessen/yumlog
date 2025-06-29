@@ -3,7 +3,7 @@ image_convert.py
 ---------------------
 Script to convert, compress, and optionally resize images in bulk.
 
-Scans the `images/raw/` directory for supported image formats,
+Scans the `raw_images/` directory for supported image formats,
 converts them to the specified output format, resizes them while preserving
 aspect ratio, and compresses based on the selected quality setting.
 
@@ -19,7 +19,7 @@ except ImportError:
     exit(1)
 
 # Define variables
-INPUT_DIR = 'images/raw/'
+INPUT_DIR = 'raw_images/'
 OUTPUT_DIR = 'images/'
 OUTPUT_FORMAT = 'WEBP'       # Options: JPEG, PNG, WEBP, etc.
 RESIZE_TO = None      # (width, height) or None to skip resizing

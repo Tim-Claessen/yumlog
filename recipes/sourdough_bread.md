@@ -16,7 +16,7 @@ layout: recipe
 
 # Sourdough Bread
 
-![sourdough_bread](./images/sourdough_bread.webp)  
+![sourdough_bread](../images/sourdough_bread.webp)  
 
 ## Ingredients
 - 110g starter
