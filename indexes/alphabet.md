@@ -15,6 +15,7 @@ title: 🔤 A-Z
 - [Chickpea and Cauliflower Salad](../recipes/chickpea_and_cauliflower_salad.md)
 - [Choc Chip Cookies](../recipes/choc_chip_cookies.md)
 - [Dan Dan Noodles](../recipes/dan_dan_noodles.md)
+- [Dara's Tomato Soup](../recipes/dara_tomato_soup.md)
 - [Discard Brownies](../recipes/discard_brownies.md)
 - [Discard Crackers](../recipes/discard_crackers.md)
 - [Discard Pikelets](../recipes/discard_pikelets.md)
