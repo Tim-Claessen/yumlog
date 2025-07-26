@@ -33,7 +33,7 @@ All submissions will be reviewed before being added to the cookbook. Over time, 
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
 - Create GenAI generator:
     - GenAI component (cohere or Gonq?)
-    - Space in website (html file) for API and keys - netlify or vercel
+    - Format space in website
 - Test and improve automation
 - Create webscraping
 - Include brief description of each recipe
