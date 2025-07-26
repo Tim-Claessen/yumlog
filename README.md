@@ -31,8 +31,11 @@ All submissions will be reviewed before being added to the cookbook. Over time, 
 ## ✅ To-Do List
 
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
+- Create GenAI generator:
+    - GenAI component (cohere or Gonq?)
+    - Space in website (html file) for API and keys - netlify or vercel
 - Test and improve automation
-- Create webscraping\
+- Create webscraping
 - Include brief description of each recipe
 - Enable filtering (category, protein, cooking time)
 - Add tags/labels for dietary info
