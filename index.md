@@ -26,4 +26,8 @@ These are the go-to recipes we make all the time:
 
 📁 [Browse by Category](./indexes/categories.md)  
 🏷️ [Browse by Protein](./indexes/proteins.md)  
-🔤 [A–Z](./indexes/alphabet.md)
+🔤 [A–Z](./indexes/alphabet.md)  
+
+## 🤖 Recipe Generator
+
+🍳 [Yumlog AI Recipe Generator](./ai-generator.md)  

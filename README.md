@@ -32,10 +32,11 @@ All submissions will be reviewed before being added to the cookbook. Over time, 
 
 - Continue to work on theme - split into 'style' 'header' 'footer' etc.
 - Test and improve automation
-- Create webscraping
-- Include image thumbnails for each recipe
+- Create webscraping\
+- Include brief description of each recipe
 - Enable filtering (category, protein, cooking time)
 - Add tags/labels for dietary info
+- Include image thumbnails for each recipe - ON HOLD: capability exists now, but doesn't fit vibe of website
 
 ## 🙏 Credits
 
