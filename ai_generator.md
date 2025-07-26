@@ -54,19 +54,37 @@ Type your idea into the assistant below, get 3 recipe options, and pick your fav
 
 <script>
   async function getRecipe() {
-    const input = document.getElementById('idea').value;
+    const input = document.getElementById('idea').value.trim();
     const output = document.getElementById('recipe-response');
-    output.textContent = 'Generating...';
+
+    if (!input) {
+      output.textContent = 'Please enter a recipe idea.';
+      return;
+    }
+
+    output.textContent = 'Thinking...';
 
     try {
-      const response = await fetch('https://yumlog.netlify.app/.netlify/functions/hello-world');
+      const response = await fetch('https://yumlog.netlify.app/.netlify/functions/hello-world', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ prompt: input })
+      });
+
       const data = await response.json();
-      output.textContent = data.message;
-    } catch (error) {
-      output.textContent = 'Sorry, something went wrong.';
-      console.error(error);
+
+      if (response.ok) {
+        output.textContent = data.response;
+      } else {
+        output.textContent = data.error || 'Something went wrong.';
+      }
+    } catch (err) {
+      output.textContent = 'Something went wrong.';
+      console.error(err);
     }
   }
 </script>
 
-> 🧠 Powered by AI. No login required. Free for anyone to use.
+_Powered by AI. No login required. Free for anyone to use._
