@@ -16,13 +16,15 @@ Explore by category, protein, or in alphabetical order — and enjoy the simple 
 
 These are the go-to recipes we make all the time:
 
-- 🍞 [Sourdough Bread](/recipes/sourdough_bread.md)
-- 🍰 [Apple Pie Slice](/recipes/apple_pie_slice.md)
-- 🍞 [Vegemite Scroll](/recipes/vege_scrolls.md)
+🍞 [Sourdough Bread](/recipes/sourdough_bread.md)
+🍰 [Apple Pie Slice](/recipes/apple_pie_slice.md)
+🍞 [Vegemite Scroll](/recipes/vege_scrolls.md)
 
 ---
 
 ## 🗂️ Browse Recipes
+
+Here are some neat ways to find a recipe:
 
 📁 [Browse by Category](./indexes/categories.md)  
 🏷️ [Browse by Protein](./indexes/proteins.md)  
@@ -32,4 +34,12 @@ These are the go-to recipes we make all the time:
 
 ## 🤖 Recipe Generator
 
+Nothing hitting the spot? Get some creative inspo from a robot friend:
+
 🍳 [Yumlog AI Recipe Generator](./ai_generator.md)  
+
+## 🧑‍🍳 Submit New Recipe
+
+Something missing that you want to add? Please share your suggestions here:
+
+📝 [Recipe Submission Form](https://forms.gle/Fj8Szehe23sCvq6GA)
