@@ -38,8 +38,10 @@ Nothing hitting the spot? Get some creative inspo from a robot friend:
 
 🍳 [Yumlog AI Recipe Generator](./ai_generator.md)  
 
+---
+
 ## 🧑‍🍳 Submit New Recipe
 
-Something missing that you want to add? Please share your suggestions here:
+Please add your favourite recipes to help grow Yumlog:
 
 📝 [Recipe Submission Form](https://forms.gle/Fj8Szehe23sCvq6GA)
