@@ -32,14 +32,6 @@ Here are some neat ways to find a recipe:
 
 ---
 
-## 🤖 Recipe Generator
-
-Nothing hitting the spot? Get some creative inspo from a robot friend:
-
-🍳 [Yumlog AI Recipe Generator](./ai_generator.md)  
-
----
-
 ## 🧑‍🍳 Submit New Recipe
 
 Please add your favourite recipes to help grow Yumlog:
