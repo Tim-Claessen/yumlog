@@ -4,6 +4,7 @@
 - [Baked Oatmeal](../recipes/baked_oatmeal.md)
 - [Brown Rice Salad](../recipes/brown_rice_salad.md)
 - [Choc Chip Cookies](../recipes/choc_chip_cookies.md)
+- [Cinnamon Roll Sourdough Focaccia](../recipes/cinnamon_roll_sourdough_focaccia.md)
 - [Dara's Tomato Soup](../recipes/dara_tomato_soup.md)
 - [Discard Brownies](../recipes/discard_brownies.md)
 - [Discard Crackers](../recipes/discard_crackers.md)

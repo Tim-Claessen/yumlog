@@ -1,5 +1,6 @@
 # 🍞 Sourdough Recipes
 
+- [Cinnamon Roll Sourdough Focaccia](../recipes/cinnamon_roll_sourdough_focaccia.md)
 - [Discard Brownies](../recipes/discard_brownies.md)
 - [Discard Crackers](../recipes/discard_crackers.md)
 - [Discard Pikelets](../recipes/discard_pikelets.md)
