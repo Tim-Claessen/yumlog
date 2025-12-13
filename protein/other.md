@@ -21,4 +21,5 @@
 - [Sourdough Fruit Bread](../recipes/sourdough_fruit_bread.md)
 - [Sourdough Olive Bread](../recipes/sourdough_olive_bread.md)
 - [Vegemite Scroll](../recipes/vege_scrolls.md)
+- [Vietnamese Dressing (Nuoc Cham)](../recipes/vietnamese_dressing.md)
 - [Whiskey Sour](../recipes/whiskey_sour.md)
