@@ -27,6 +27,7 @@ title: 🔤 A-Z
 - [Japanese Sesame Dressing](../recipes/seaseme_dressing.md)
 - [Lentil Shepherd's Pie](../recipes/lentil_shepherds_pie.md)
 - [Lisa's Cinny Scrolls](../recipes/lisa_cinny_scrolls.md)
+- [Mars Bar Slice](../recipes/mars_bar_slice.md)
 - [Mixed Berry Muffins](../recipes/mixed_berry_muffins.md)
 - [Pinwheels](../recipes/pinwheels.md)
 - [Pizza Dough](../recipes/pizza_dough.md)
