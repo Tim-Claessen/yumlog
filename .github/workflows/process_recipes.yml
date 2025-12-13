@@ -3,6 +3,7 @@ name: Process Recipes
 on:
   workflow_dispatch:
   schedule:
+    # Runs daily at 16:00 UTC (12:00 AM / Midnight AWST)
     - cron: '0 16 * * *'
 
 jobs:
@@ -30,14 +31,18 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
 
-      - name: Detect recipe changes (without staging)
+      # --- CRITICAL FIX: Stage the files so 'git diff' can see them ---
+      - name: Stage all generated changes
+        run: git add .
+
+      - name: Detect recipe changes (with staging check)
         id: check_changes
         run: |
-          if git diff --quiet; then
-            echo "No new recipes."
+          if git diff --cached --exit-code; then
+            echo "No new recipes or changes found."
             echo "changed=false" >> $GITHUB_OUTPUT
           else
-            echo "New recipes found."
+            echo "New recipes found and staged."
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
