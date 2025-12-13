@@ -38,20 +38,20 @@ def extract_yaml_front_matter(filepath):
     Returns:
         dict: Parsed YAML front matter or None if not found/invalid.
     """
-    try:
-        with open(filepath, 'r', encoding='utf-8') as f:
+    #try:
+    with open(filepath, 'r', encoding='utf-8') as f:
             lines = f.readlines()
-        if not lines or lines[0].strip() != "---":
-            return None
-        yaml_lines = []
-        for line in lines[1:]:
-            if line.strip() == "---":
-                break
-            yaml_lines.append(line)
-        return yaml.safe_load("".join(yaml_lines))
-    except Exception as e:
-        print(f"❌ Error reading YAML front matter from {filepath}: {e}")
+    if not lines or lines[0].strip() != "---":
         return None
+    yaml_lines = []
+    for line in lines[1:]:
+        if line.strip() == "---":
+            break
+        yaml_lines.append(line)
+    return yaml.safe_load("".join(yaml_lines))
+    #except Exception as e:
+        #print(f"❌ Error reading YAML front matter from {filepath}: {e}")
+        #return None
 
 def normalize_value(value):
     """
