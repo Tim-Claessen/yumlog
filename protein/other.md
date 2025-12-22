@@ -3,6 +3,7 @@
 - [Apple Pie Slice](../recipes/apple_pie_slice.md)
 - [Baked Oatmeal](../recipes/baked_oatmeal.md)
 - [Brown Rice Salad](../recipes/brown_rice_salad.md)
+- [Cheesy Garlic Sourdough Focaccia](../recipes/cheesy_garlic_sourdough_focaccia.md)
 - [Choc Chip Cookies](../recipes/choc_chip_cookies.md)
 - [Cinnamon Roll Sourdough Focaccia](../recipes/cinnamon_roll_sourdough_focaccia.md)
 - [Dara's Tomato Soup](../recipes/dara_tomato_soup.md)

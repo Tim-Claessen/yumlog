@@ -11,6 +11,7 @@ title: 🔤 A-Z
 - [Brown Rice Salad](../recipes/brown_rice_salad.md)
 - [Cadju Curry](../recipes/cadju_curry.md)
 - [Cauliflower Biryani](../recipes/cauliflower_biryani.md)
+- [Cheesy Garlic Sourdough Focaccia](../recipes/cheesy_garlic_sourdough_focaccia.md)
 - [Chia Seed Egg](../recipes/chia_seed_egg.md)
 - [Chickpea and Cauliflower Salad](../recipes/chickpea_and_cauliflower_salad.md)
 - [Choc Chip Cookies](../recipes/choc_chip_cookies.md)
