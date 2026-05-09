@@ -6,8 +6,7 @@ theme: null
 
 # Home page (consumed by _layouts/home.html — avoids hardcoding in templates)
 home_lead: >
-  A warm, open notebook of dishes we actually cook — organised so you can search,
-  skim what’s new, or wander the shelves by category and protein.
+  Dishes we actually cook, organised so you can search or wander the shelves by category and protein.
 
 submit_recipe_url: "https://forms.gle/Fj8Szehe23sCvq6GA"
 
