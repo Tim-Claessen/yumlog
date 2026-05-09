@@ -54,13 +54,14 @@ layout: default
   <div class="chip-grid chip-grid--category" role="list">
     {% for c in cat_pages %}
     {% assign cbase = c.name | default: '' | replace: '.md', '' %}
-    {% assign craw = cbase | replace: '_', ' ' %}
+    {% assign raw_label = c.title | default: c.name %}
+    {% assign clabel = raw_label | replace: '.md', '' | replace: '_', ' ' | replace: '-', ' ' | strip %}
     {% if cbase == 'appetisers_sides' %}
-      {% assign craw = 'appetisers & sides' %}
+      {% assign clabel = 'appetisers & sides' %}
     {% elsif cbase == 'grains_rice' %}
-      {% assign craw = 'grains & rice' %}
+      {% assign clabel = 'grains & rice' %}
     {% endif %}
-    {% assign cwords = craw | split: ' ' %}
+    {% assign cwords = clabel | split: ' ' %}
     {% capture clabel %}{% for word in cwords %}{% unless forloop.first %} {% endunless %}{{ word | capitalize }}{% endfor %}{% endcapture %}
     <a role="listitem" class="chip chip--outlined" href="{{ c.url | relative_url }}">
       <span class="material-symbols-rounded chip__icon" aria-hidden="true">folder</span>
@@ -73,20 +74,21 @@ layout: default
 {% assign prot_pages = site.pages | where_exp: "p", "p.path contains 'protein/'" | sort: "name" %}
 <section class="home-section" aria-labelledby="browse-pro-heading">
   <h2 id="browse-pro-heading" class="home-section__title">
-    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">kebab_dining</span>
+    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">restaurant</span>
     Browse by protein
   </h2>
   <div class="chip-grid chip-grid--protein" role="list">
     {% for prot in prot_pages %}
     {% assign pbase = prot.name | default: '' | replace: '.md', '' %}
-    {% assign praw = pbase | replace: '_', ' ' %}
-    {% if pbase == 'nuts_seed' or pbase == 'nuts_seeds' %}
-      {% assign praw = 'nuts & seeds' %}
+    {% assign raw_label = prot.title | default: prot.name %}
+    {% assign plabel = raw_label | replace: '.md', '' | replace: '_', ' ' | replace: '-', ' ' | strip %}
+    {% if pbase == 'nuts_seeds' %}
+      {% assign plabel = 'nuts & seeds' %}
     {% endif %}
-    {% assign pwords = praw | split: ' ' %}
+    {% assign pwords = plabel | split: ' ' %}
     {% capture plabel %}{% for word in pwords %}{% unless forloop.first %} {% endunless %}{{ word | capitalize }}{% endfor %}{% endcapture %}
     <a role="listitem" class="chip chip--outlined" href="{{ prot.url | relative_url }}">
-      <span class="material-symbols-rounded chip__icon" aria-hidden="true">kebab_dining</span>
+      <span class="material-symbols-rounded chip__icon" aria-hidden="true">restaurant</span>
       <span class="chip__label">{{ plabel | escape_once }}</span>
     </a>
     {% endfor %}

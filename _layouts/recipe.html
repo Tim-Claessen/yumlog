@@ -16,7 +16,7 @@ layout: default
         {% assign pstrip = praw | replace: '[[', '' | replace: ']]', '' | replace: '"', '' | strip %}
         {% if pstrip != '' %}
       <span class="recipe-pill recipe-pill--outline">
-        <span class="material-symbols-rounded" aria-hidden="true">kebab_dining</span>
+        <span class="material-symbols-rounded" aria-hidden="true">restaurant</span>
         <span>{{ pstrip | replace: '_', ' ' | escape }}</span>
       </span>
         {% endif %}

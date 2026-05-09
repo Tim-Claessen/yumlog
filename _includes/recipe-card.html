@@ -1,10 +1,12 @@
 {% comment %}
   Recipe card (text + icon). Expects: recipe (page), icon (Material Symbol name).
   Optional: variant — "compact" for dense grids.
+  Optional: show_servings — include servings row (default false).
 {% endcomment %}
 {% assign r = include.recipe %}
 {% assign ic = include.icon | default: "menu_book" %}
 {% assign variant = include.variant | default: "" %}
+{% assign show_servings = include.show_servings | default: false %}
 {% if r %}
 <a class="recipe-card {% if variant != '' %}recipe-card--{{ variant }}{% endif %}" href="{{ r.url | relative_url }}">
   <span class="recipe-card__icon-wrap" aria-hidden="true">
@@ -16,20 +18,27 @@
     <span class="recipe-card__desc">{{ r.summary | strip | escape }}</span>
     {% endif %}
     <span class="recipe-card__meta" aria-label="Recipe details">
-      {% if r.prep_time_mins %}
+      {% assign _total_mins = r.total_time_mins | default: 0 %}
+      {% if r.prep_time_mins and _total_mins > 0 %}
       <span class="recipe-card__meta-item">
         <span class="material-symbols-rounded recipe-card__meta-icon" aria-hidden="true">schedule</span>
-        <span>Prep {% if r.prep_time_mins == 1 %}1 min{% else %}{{ r.prep_time_mins }} min{% endif %}</span>
+        <span>{% if r.prep_time_mins == 1 %}1 min{% else %}{{ r.prep_time_mins }} min{% endif %} prep</span>
+        <span class="recipe-card__meta-sep" aria-hidden="true">·</span>
+        <span class="material-symbols-rounded recipe-card__meta-icon" aria-hidden="true">timer</span>
+        <span>{% if _total_mins == 1 %}1 min{% else %}{{ _total_mins }} min{% endif %} total</span>
       </span>
-      {% endif %}
-      {% assign _total_mins = r.total_time_mins | default: 0 %}
-      {% if _total_mins > 0 %}
+      {% elsif r.prep_time_mins %}
+      <span class="recipe-card__meta-item">
+        <span class="material-symbols-rounded recipe-card__meta-icon" aria-hidden="true">schedule</span>
+        <span>{% if r.prep_time_mins == 1 %}1 min{% else %}{{ r.prep_time_mins }} min{% endif %} prep</span>
+      </span>
+      {% elsif _total_mins > 0 %}
       <span class="recipe-card__meta-item">
         <span class="material-symbols-rounded recipe-card__meta-icon" aria-hidden="true">timer</span>
-        <span>Total {% if _total_mins == 1 %}1 min{% else %}{{ _total_mins }} min{% endif %}</span>
+        <span>{% if _total_mins == 1 %}1 min{% else %}{{ _total_mins }} min{% endif %} total</span>
       </span>
       {% endif %}
-      {% if r.servings %}
+      {% if show_servings and r.servings %}
       <span class="recipe-card__meta-item">
         <span class="material-symbols-rounded recipe-card__meta-icon" aria-hidden="true">group</span>
         <span>{{ r.servings | escape }}</span>

@@ -2,7 +2,7 @@
 title: Chia Seed Egg
 category: "[[other]]"
 protein:
-  - "[[nuts_seed]]"
+  - "[[nuts_seeds]]"
 prep_time_mins: 1
 total_time_mins: 5
 source: https://minimalistbaker.com/make-chia-egg/
