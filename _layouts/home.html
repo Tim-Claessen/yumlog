@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign recipe_pages = site.pages | where_exp: "p", "p.path contains 'recipes/' and p.layout == 'recipe'" %}
+{% assign recipe_pages = site.pages | where: "layout", "recipe" %}
 {% assign sorted_recipes = recipe_pages | sort: "date_created" | reverse %}
 
 <section class="home-hero" aria-labelledby="home-hero-title">
@@ -51,7 +51,7 @@ layout: default
   </h2>
   <div class="chip-grid chip-grid--category" role="list">
     {% for c in cat_pages %}
-    {% assign clabel = c.title | default: c.name | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
+    {% assign clabel = c.title | default: c.name | default: '' | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
     <a role="listitem" class="chip chip--filled" href="{{ c.url | relative_url }}">
       <span class="material-symbols-rounded chip__icon" aria-hidden="true">folder</span>
       <span class="chip__label">{{ clabel | escape }}</span>
@@ -67,9 +67,9 @@ layout: default
     Browse by protein
   </h2>
   <div class="chip-grid chip-grid--protein" role="list">
-    {% for p in prot_pages %}
-    {% assign plabel = p.title | default: p.name | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
-    <a role="listitem" class="chip chip--outlined" href="{{ p.url | relative_url }}">
+    {% for prot in prot_pages %}
+    {% assign plabel = prot.title | default: prot.name | default: '' | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
+    <a role="listitem" class="chip chip--outlined" href="{{ prot.url | relative_url }}">
       <span class="material-symbols-rounded chip__icon" aria-hidden="true">nutrition</span>
       <span class="chip__label">{{ plabel | escape }}</span>
     </a>

@@ -22,10 +22,11 @@
         <span>Prep {% if r.prep_time_mins == 1 %}1 min{% else %}{{ r.prep_time_mins }} min{% endif %}</span>
       </span>
       {% endif %}
-      {% if r.total_time_mins and r.total_time_mins > 0 %}
+      {% assign _total_mins = r.total_time_mins | default: 0 %}
+      {% if _total_mins > 0 %}
       <span class="recipe-card__meta-item">
         <span class="material-symbols-rounded recipe-card__meta-icon" aria-hidden="true">timer</span>
-        <span>Total {% if r.total_time_mins == 1 %}1 min{% else %}{{ r.total_time_mins }} min{% endif %}</span>
+        <span>Total {% if _total_mins == 1 %}1 min{% else %}{{ _total_mins }} min{% endif %}</span>
       </span>
       {% endif %}
       {% if r.servings %}

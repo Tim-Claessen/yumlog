@@ -28,10 +28,11 @@ layout: default
         <span>Prep {% if page.prep_time_mins == 1 %}1 min{% else %}{{ page.prep_time_mins }} min{% endif %}</span>
       </span>
       {% endif %}
-      {% if page.total_time_mins and page.total_time_mins > 0 %}
+      {% assign _page_total_mins = page.total_time_mins | default: 0 %}
+      {% if _page_total_mins > 0 %}
       <span class="recipe-pill">
         <span class="material-symbols-rounded" aria-hidden="true">timer</span>
-        <span>Total {% if page.total_time_mins == 1 %}1 min{% else %}{{ page.total_time_mins }} min{% endif %}</span>
+        <span>Total {% if _page_total_mins == 1 %}1 min{% else %}{{ _page_total_mins }} min{% endif %}</span>
       </span>
       {% endif %}
     </div>
