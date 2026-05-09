@@ -1,412 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+{% assign page_path = page.path | default: '' %}
 <head>
   <meta charset="UTF-8" />
   <title>{{ page.title | default: site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Site-wide styles -->
-  <style>
-    :root {
-      /* Brand colors */
-      --color-primary: #8D6E63;
-      --color-secondary: #D7CCC8;
-      --color-accent: #F4A261;
-      --color-highlight: #9E9E9E;
-
-      /* Light mode */
-      --bg-light: #FDF6F0;
-      --text-light: #1E1E1E;
-      --card-bg-light: var(--color-secondary);
-
-      /* Dark mode */
-      --bg-dark: #121212;
-      --text-dark: #E0E0E0;
-      --card-bg-dark: #1E1E1E;
-
-      /* Header background colors */
-      --header-bg-light: var(--color-primary);
-      --header-bg-dark: #5C4B44;
-    }
-
-    /* Base styling */
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      margin: 0 auto;
-      padding: 0 1rem;
-      max-width: 900px;
-      line-height: 1.6;
-      font-size: 16px;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    h1, h2, h3 {
-      color: var(--color-primary);
-      margin: 0;
-    }
-
-    a {
-      color: var(--color-primary);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    mark {
-      background-color: var(--color-accent); /* or any custom color */
-      color: #000000; /* forces black text */
-      padding: 0.1em 0.2em;
-      border-radius: 2px;
-    }
-
-    /* Full-width header bar */
-    header {
-      background-color: var(--header-bg-light);
-      color: white;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      padding: 0.5rem 0;
-      box-sizing: border-box;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Inner layout of header */
-    .header-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 1rem;
-    }
-
-    header h1 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-right: 3rem;
-      flex-shrink: 0;
-      cursor: pointer;
-      color: white; /* Ensure white title text */
-    }
-
-    nav.header-nav {
-      display: flex;
-      gap: 2rem;
-      flex-grow: 1;
-      justify-content: flex-end; /* Right-align buttons */
-      align-items: center;
-    }
-
-    nav.header-nav a {
-      font-weight: 600;
-      color: white;
-      white-space: nowrap;
-    }
-
-    nav.header-nav a:hover {
-      color: var(--color-accent);
-    }
-
-    /* Footer styling */
-    footer {
-      margin-top: 3rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--color-highlight);
-      font-size: 0.9rem;
-      color: var(--color-highlight);
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    footer nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1rem 0;
-      font-size: 1rem;
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    footer nav ul li a {
-      color: var(--color-primary);
-    }
-
-    footer nav ul li a:hover {
-      color: var(--color-accent);
-    }
-
-    footer .signoff {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      text-align: center;
-      color: var(--color-highlight);
-    }
-
-    /* Search input box in header */
-    #search-box {
-      margin-left: 1.5rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 4px;
-      border: 1px solid white;
-      background: transparent;
-      color: white;
-      min-width: 140px;
-      font-size: 1rem;
-      font-family: inherit;
-      transition: border-color 0.3s ease;
-    }
-
-    #search-box::placeholder {
-      font-style: italic;
-      color: white;
-      opacity: 0.7;
-    }
-
-    #search-box:focus {
-      outline: none;
-      border-color: var(--color-accent);
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    /* Search results container */
-    #search-results {
-      max-width: 900px;
-      margin: 0 auto 1rem;
-      padding: 0 1rem;
-      color: var(--color-highlight);
-    }
-
-    /* Search results entries */
-    #search-results article {
-      margin-bottom: 1rem;
-    }
-
-    #search-results a {
-      color: var(--color-primary);
-      font-weight: 600;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    #search-results a:hover,
-    #search-results a:focus {
-      color: var(--color-accent);
-      text-decoration: underline;
-    }
-
-    #search-results p {
-      margin: 0.2rem 0 0;
-      color: var(--color-highlight);
-      font-size: 0.9rem;
-    }
-
-    #search-results .no-results {
-      font-style: italic;
-      color: var(--color-primary);
-      font-weight: 600;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    /* Hamburger button styling */
-    #hamburger {
-      display: none;
-      font-size: 1.8rem;
-      background: none;
-      border: none;
-      color: white;
-      cursor: pointer;
-      margin-left: auto;
-    }
-
-    main img {
-      width: 50%;
-      max-width: 50%;
-      height: auto;
-      display: block;
-      margin-right: 1rem 0;
-    }
-
-    /* Hide nav by default on mobile */
-    @media (max-width: 768px) {
-      nav.header-nav {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        background-color: var(--header-bg-light);
-        padding: 1rem;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        z-index: 1000;
-      }
-
-      nav.header-nav.show {
-        display: flex;
-      }
-
-      #hamburger {
-        display: block;
-      }
-
-      .header-inner {
-        flex-wrap: wrap;
-      }
-
-      #search-box {
-        margin-top: 0.5rem;
-        width: 100%;
-        margin-left: 0;
-      }
-
-      /* Image formatting */
-      main img {
-        width: 100%;
-        max-width: 100%;
-        margin: 1rem auto;
-      }
-
-    }
-  </style>
+  <script>
+    (function () {
+      var k = 'yumlog-theme';
+      var stored = localStorage.getItem(k);
+      var theme = stored === 'light' || stored === 'dark'
+        ? stored
+        : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" />
 </head>
-<body>
-  <!-- Site header -->
-  <header>
+<body class="{% if page.layout == 'home' %}page-home{% endif %} {% if page.layout == 'recipe' %}page-recipe{% endif %} {% if page_path contains 'category/' %}page-browse-list page-browse-category{% endif %} {% if page_path contains 'protein/' %}page-browse-list page-browse-protein{% endif %} {% if page_path contains 'indexes/' %}page-index-hub{% endif %} {% if page_path contains 'indexes/alphabet' %}page-index-alphabet{% endif %}">
+  <header class="site-header">
     <div class="header-inner">
-      <h1 onclick="location.href='{{ site.baseurl }}/';" tabindex="0" role="link" aria-label="Go to homepage">Yumlog</h1>
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
 
-      <!-- Hamburger Button -->
-      <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <button type="button" class="header-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
 
-      <!-- Navigation Menu -->
-      <nav class="header-nav" id="nav-menu" aria-label="Primary navigation">
-        <a href="{{ '/indexes/categories' | relative_url }}">Category</a>
-        <a href="{{ '/indexes/proteins' | relative_url }}">Protein</a>
-        <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z</a>
-      </nav>
+      <div class="header-toolbar">
+        <nav class="header-nav" id="nav-menu" aria-label="Primary navigation">
+          <a href="{{ '/indexes/categories' | relative_url }}">
+            <span class="material-symbols-rounded material-symbols-rounded--small" aria-hidden="true">folder</span>
+            <span>Category</span>
+          </a>
+          <a href="{{ '/indexes/proteins' | relative_url }}">
+            <span class="material-symbols-rounded material-symbols-rounded--small" aria-hidden="true">nutrition</span>
+            <span>Protein</span>
+          </a>
+          <a href="{{ '/indexes/alphabet' | relative_url }}">
+            <span class="material-symbols-rounded material-symbols-rounded--small" aria-hidden="true">sort_by_alpha</span>
+            <span>A–Z</span>
+          </a>
+        </nav>
 
-      <input type="search" id="search-box" placeholder="Search recipes..." aria-label="Search recipes">
+        <input
+          type="search"
+          id="search-box"
+          class="search-input search-input--header"
+          data-search-input
+          placeholder="Search…"
+          aria-label="Search recipes"
+          autocomplete="off"
+        />
+
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch color theme">
+          <span class="material-symbols-rounded theme-toggle-icon" aria-hidden="true">dark_mode</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Main page content -->
-  <main>
-    <div id="search-results" aria-live="polite" aria-atomic="true"></div>
+  <main id="main-content">
+    {% unless page.layout == 'home' %}
+    <div id="search-results" class="search-results" aria-live="polite" aria-atomic="true"></div>
+    {% endunless %}
     {{ content }}
   </main>
 
-  <!-- Site footer -->
-  <footer>
-    <nav>
+  <footer class="site-footer">
+    <nav aria-label="Footer">
       <ul>
-        <li>📁 <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a></li>
-        <li>🏷️ <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a></li>
-        <li>🔤 <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a></li>
-        <li>🍳 <a href="{{ '/ai_generator' | relative_url }}">Yumlog Recipe Generator</a></li>
+        <li>
+          <span class="material-symbols-rounded" aria-hidden="true">folder</span>
+          <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a>
+        </li>
+        <li>
+          <span class="material-symbols-rounded" aria-hidden="true">nutrition</span>
+          <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a>
+        </li>
+        <li>
+          <span class="material-symbols-rounded" aria-hidden="true">sort_by_alpha</span>
+          <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a>
+        </li>
+        <li>
+          <span class="material-symbols-rounded" aria-hidden="true">menu_book</span>
+          <a href="{{ '/ai_generator' | relative_url }}">Yumlog Recipe Generator</a>
+        </li>
       </ul>
     </nav>
-    <div class="signoff"> - Made with 🧡 by Tim &amp; Zoe - </div>
+    <div class="signoff">Made with care by Tim &amp; Zoe</div>
   </footer>
-  
-  <!-- Hamburger button script-->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!expanded));
-    });
+  <script>
+    (function () {
+      var hamburger = document.getElementById('hamburger');
+      var navMenu = document.getElementById('nav-menu');
+      if (!hamburger || !navMenu) return;
+      hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+        var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!expanded));
+      });
+    })();
   </script>
 
-  <!-- Search script-->
   <script>
-    // Elements
-    const searchBox = document.getElementById('search-box');
-    const resultsContainer = document.getElementById('search-results');
-
-    let recipes = [];
-
-    // Load search data (adjust path to your actual JSON search index)
-    fetch('{{ "/search.json" | relative_url }}')
-      .then(response => response.json())
-      .then(data => {
-        recipes = data;
-      })
-      .catch(() => {
-        resultsContainer.innerHTML = '<p>Failed to load search data.</p>';
-      });
-
-    // Listen for input changes
-    searchBox.addEventListener('input', () => {
-      const query = searchBox.value.trim().toLowerCase();
-
-      if (!query) {
-        resultsContainer.innerHTML = '';
-        return;
+    (function () {
+      const root = document.documentElement;
+      const key = 'yumlog-theme';
+      const toggle = document.getElementById('theme-toggle');
+      const icon = toggle && toggle.querySelector('.theme-toggle-icon');
+      function syncChrome() {
+        const t = root.getAttribute('data-theme') || 'light';
+        if (icon) {
+          icon.textContent = t === 'dark' ? 'light_mode' : 'dark_mode';
+        }
+        if (toggle) {
+          toggle.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+        }
       }
+      function setTheme(next) {
+        root.setAttribute('data-theme', next);
+        localStorage.setItem(key, next);
+        syncChrome();
+      }
+      if (toggle) {
+        syncChrome();
+        toggle.addEventListener('click', function () {
+          const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          setTheme(next);
+        });
+      }
+    })();
+  </script>
 
-      // Highlight matched term helper function
+  <script>
+    (function () {
+      const resultsContainer = document.getElementById('search-results');
+      const inputs = document.querySelectorAll('[data-search-input]');
+      if (!resultsContainer || !inputs.length) return;
+
+      let recipes = [];
+
       function highlight(text, term) {
-        const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+        const regex = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
         return text.replace(regex, '<mark>$1</mark>');
       }
 
-      // Get snippet around match (max 100 chars)
       function getSnippet(content, term) {
         const idx = content.toLowerCase().indexOf(term);
         if (idx === -1) {
-          return content.substring(0, 100) + (content.length > 100 ? '...' : '');
+          return content.substring(0, 100) + (content.length > 100 ? '…' : '');
         }
         const snippetLength = 100;
         const start = Math.max(0, idx - 30);
         let snippet = content.substring(start, start + snippetLength);
-        if (start > 0) snippet = '...' + snippet;
-        if (start + snippetLength < content.length) snippet += '...';
+        if (start > 0) snippet = '…' + snippet;
+        if (start + snippetLength < content.length) snippet += '…';
         return snippet;
       }
 
-      // Filter recipes
-      const matches = recipes.filter(recipe =>
-        recipe.title.toLowerCase().includes(query) ||
-        (recipe.content && recipe.content.toLowerCase().includes(query))
-      );
+      function renderResults(query) {
+        if (!query) {
+          resultsContainer.innerHTML = '';
+          return;
+        }
 
-      if (matches.length === 0) {
-        resultsContainer.innerHTML = '<p class="no-results">No results found.</p>';
-        return;
+        const matches = recipes.filter(function (recipe) {
+          return recipe.title.toLowerCase().includes(query) ||
+            (recipe.content && recipe.content.toLowerCase().includes(query));
+        });
+
+        if (!matches.length) {
+          resultsContainer.innerHTML = '<p class="search-results__empty no-results">No results found.</p>';
+          return;
+        }
+
+        resultsContainer.innerHTML =
+          '<div class="search-results__grid" role="list">' +
+          matches.map(function (recipe) {
+            const highlightedTitle = highlight(recipe.title, query);
+            const snippet = recipe.content ? getSnippet(recipe.content, query) : '';
+            const highlightedSnippet = highlight(snippet, query);
+            return (
+              '<a role="listitem" class="search-hit recipe-card recipe-card--compact" href="' + recipe.url + '">' +
+              '<span class="recipe-card__icon-wrap" aria-hidden="true">' +
+              '<span class="material-symbols-rounded recipe-card__icon">search</span></span>' +
+              '<span class="recipe-card__body">' +
+              '<span class="recipe-card__title">' + highlightedTitle + '</span>' +
+              (snippet ? '<span class="recipe-card__desc">' + highlightedSnippet + '</span>' : '') +
+              '</span></a>'
+            );
+          }).join('') +
+          '</div>';
       }
 
-      // Build HTML with highlighted matches in title and snippet
-      resultsContainer.innerHTML = matches.map(recipe => {
-        const highlightedTitle = highlight(recipe.title, query);
-        const snippet = recipe.content ? getSnippet(recipe.content, query) : '';
-        const highlightedSnippet = highlight(snippet, query);
+      function syncInputs(source, value) {
+        inputs.forEach(function (el) {
+          if (el !== source) el.value = value;
+        });
+      }
 
-        return `
-          <article>
-            <a href="${recipe.url}">${highlightedTitle}</a>
-            <p>${highlightedSnippet}</p>
-          </article>
-        `;
-      }).join('');
-    });
+      fetch('{{ "/search.json" | relative_url }}')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          recipes = data;
+        })
+        .catch(function () {
+          resultsContainer.innerHTML = '<p class="search-results__empty no-results">Failed to load search data.</p>';
+        });
+
+      inputs.forEach(function (el) {
+        el.addEventListener('input', function () {
+          const q = el.value.trim().toLowerCase();
+          syncInputs(el, el.value);
+          renderResults(q);
+        });
+      });
+    })();
   </script>
-
 </body>
 </html>

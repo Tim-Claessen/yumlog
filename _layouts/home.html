@@ -1,0 +1,91 @@
+---
+layout: default
+---
+
+{% assign recipe_pages = site.pages | where_exp: "p", "p.path contains 'recipes/' and p.layout == 'recipe'" %}
+{% assign sorted_recipes = recipe_pages | sort: "date_created" | reverse %}
+
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__inner">
+    <p class="home-hero__eyebrow">{{ site.description | escape }}</p>
+    <h1 id="home-hero-title" class="home-hero__title">{{ site.title | escape }}</h1>
+    {% if site.home_lead %}
+    <p class="home-hero__lead">{{ site.home_lead | strip }}</p>
+    {% endif %}
+    <div class="home-hero__search">
+      <label class="visually-hidden" for="search-home">Search recipes</label>
+      <span class="material-symbols-rounded home-hero__search-icon" aria-hidden="true">search</span>
+      <input
+        type="search"
+        id="search-home"
+        class="search-input search-input--hero"
+        data-search-input
+        placeholder="Search by name or ingredient…"
+        aria-label="Search recipes"
+        autocomplete="off"
+      />
+    </div>
+    <p class="home-hero__hint" id="search-hint-home">Results appear just below when you type.</p>
+  </div>
+</section>
+
+<div id="search-results" class="search-results search-results--home" aria-live="polite" aria-atomic="true" aria-describedby="search-hint-home"></div>
+
+<section class="home-section" aria-labelledby="recent-heading">
+  <h2 id="recent-heading" class="home-section__title">
+    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">schedule</span>
+    Recently added
+  </h2>
+  <div class="recipe-card-grid">
+    {% for r in sorted_recipes limit: 6 %}
+      {% include recipe-card.html recipe=r icon="menu_book" %}
+    {% endfor %}
+  </div>
+</section>
+
+{% assign cat_pages = site.pages | where_exp: "p", "p.path contains 'category/'" | sort: "title" %}
+<section class="home-section" aria-labelledby="browse-cat-heading">
+  <h2 id="browse-cat-heading" class="home-section__title">
+    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">folder</span>
+    Browse by category
+  </h2>
+  <div class="chip-grid chip-grid--category" role="list">
+    {% for c in cat_pages %}
+    {% assign clabel = c.title | default: c.name | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
+    <a role="listitem" class="chip chip--filled" href="{{ c.url | relative_url }}">
+      <span class="material-symbols-rounded chip__icon" aria-hidden="true">folder</span>
+      <span class="chip__label">{{ clabel | escape }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% assign prot_pages = site.pages | where_exp: "p", "p.path contains 'protein/'" | sort: "title" %}
+<section class="home-section" aria-labelledby="browse-pro-heading">
+  <h2 id="browse-pro-heading" class="home-section__title">
+    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">nutrition</span>
+    Browse by protein
+  </h2>
+  <div class="chip-grid chip-grid--protein" role="list">
+    {% for p in prot_pages %}
+    {% assign plabel = p.title | default: p.name | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
+    <a role="listitem" class="chip chip--outlined" href="{{ p.url | relative_url }}">
+      <span class="material-symbols-rounded chip__icon" aria-hidden="true">nutrition</span>
+      <span class="chip__label">{{ plabel | escape }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% if site.submit_recipe_url %}
+<section class="home-cta" aria-labelledby="submit-heading">
+  <h2 id="submit-heading" class="visually-hidden">Submit a recipe</h2>
+  <p class="home-cta__text">Know a dish we should add?</p>
+  <a class="home-cta__link" href="{{ site.submit_recipe_url }}">
+    <span class="material-symbols-rounded home-cta__icon" aria-hidden="true">edit_note</span>
+    <span>Submit a recipe</span>
+  </a>
+</section>
+{% endif %}
+
+{{ content }}

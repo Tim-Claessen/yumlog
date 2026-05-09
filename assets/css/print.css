@@ -1,0 +1,100 @@
+/* Print — A4-friendly recipe pages; black on white for kitchen use */
+
+@media print {
+  @page {
+    margin: 1.2cm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  .site-header,
+  .site-footer,
+  .theme-toggle,
+  .header-hamburger,
+  .search-input--header,
+  .home-hero,
+  .home-cta,
+  .chip-grid,
+  .home-section,
+  .search-results,
+  nav.header-nav {
+    display: none !important;
+  }
+
+  #main-content {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .recipe-page {
+    padding: 0 !important;
+  }
+
+  .recipe-header__icons {
+    display: none !important;
+  }
+
+  .recipe-title {
+    color: #000 !important;
+    font-size: 18pt !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .recipe-source {
+    color: #000 !important;
+    font-size: 10pt !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .recipe-prose {
+    font-size: 11pt !important;
+    max-width: none !important;
+    color: #000 !important;
+  }
+
+  .recipe-prose h2 {
+    color: #000 !important;
+    font-size: 13pt !important;
+    margin-top: 1rem !important;
+    page-break-after: avoid;
+  }
+
+  .recipe-prose h2:first-of-type,
+  .recipe-prose h2:first-of-type + ul {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .recipe-prose ul,
+  .recipe-prose ol {
+    color: #000 !important;
+  }
+
+  .recipe-prose a {
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  .recipe-prose img {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  a {
+    color: #000 !important;
+  }
+
+  mark {
+    background: transparent !important;
+    color: #000 !important;
+    font-weight: 600;
+  }
+}

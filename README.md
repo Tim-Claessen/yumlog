@@ -1,58 +1,79 @@
-# 🍽️ Tim & Zoe's Yumlog
+# Tim & Zoe's Yumlog
 
-**Zoe & Tim's Favourite Recipes**
+**Zoe & Tim's favourite recipes**
 
-**Yumlog** is a cookbook built to collect the foods we love making. Filled with delicious recipes, carefully categorised and easy to browse. Whether you're baking bread, simmering a curry, or whipping up a quick stir-fry, there's something here for every kind of cook.
+**Yumlog** is a cookbook for the foods we love making: easy to search, browse by category or protein, or skim A–Z. Built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
 
-Explore by category, protein, or in alphabetical order — and enjoy the simple pleasure of cooking something great.
+## Table of contents
 
-## 📖 Table of Contents
-
-- [Live Site](#live-site)
-- [Contributions](#contributions)
-- [To-Do List](#to-do-list)
+- [Live site](#live-site)
+- [Contributing](#contributing)
+- [Local development](#local-development)
+- [Layout and theming](#layout-and-theming)
+- [Developer tools](#developer-tools)
+- [Line endings](#line-endings)
+- [To-do](#to-do)
 - [Credits](#credits)
 - [License](#license)
-- [Developer Tools](#developer-tools)
 
-## 🌐 Live Site
+## Live site
 
-Explore our recipes live at: [https://tim-claessen.github.io/yumlog](https://tim-claessen.github.io/yumlog)
+[https://tim-claessen.github.io/yumlog](https://tim-claessen.github.io/yumlog)
 
-## 📬 Contributions
-We’d love to hear what recipes you’ve been cooking! If you have a favourite dish you'd like to share, you can submit it using our Google Form:
+## Contributing
 
-👉 [Submit a Recipe](forms.gle/Fj8Szehe23sCvq6GA)
+Share a recipe via the Google Form:
 
-All submissions will be reviewed before being added to the cookbook. Over time, your recipe may appear on the live site once it's been formatted and indexed properly. ✨
+[Submit a recipe](https://forms.gle/Fj8Szehe23sCvq6GA)
 
->**Note:** Submissions are intended for personal/family favourites — please credit your sources if adapted or inspired by another recipe.
+Submissions are reviewed before they appear on the site. Please credit sources when a recipe is adapted or inspired elsewhere.
 
-## ✅ To-Do List
+## Local development
 
-- Continue to work on theme - split into 'style' 'header' 'footer' etc.
-- Create GenAI generator:
-    - GenAI component (cohere or Gonq?)
-    - Format space in website
-- Test and improve automation
-- Create webscraping
-- Include brief description of each recipe
-- Enable filtering (category, protein, cooking time)
-- Add tags/labels for dietary info
-- Include image thumbnails for each recipe - ON HOLD: capability exists now, but doesn't fit vibe of website
+From the repo root:
 
-## 🙏 Credits
+```bash
+bundle exec jekyll serve
+```
 
-A heartfelt thank you to all the chefs, food bloggers, friends who've inspired these recipes. 
+Then open the URL Jekyll prints (often `http://127.0.0.1:4000/yumlog/` when using the configured `baseurl`).
 
-Also thank you to the develpers who have helped. Detailed acknowledgments for them can be found in our [Credits](https://github.com/Tim-Claessen/yumlog/blob/main/Credits.md) file.
+If you do not use Bundler, `jekyll serve` works once Jekyll is installed. The site uses default GitHub Pages–friendly Jekyll settings (no custom Ruby gems in-repo).
 
-## 📄 License
+## Layout and theming
 
-This project is licensed under the [MIT License](https://github.com/Tim-Claessen/yumlog/blob/main/LICENSE).
+| Piece | Role |
+|--------|------|
+| `_layouts/default.html` | Site shell: header (nav, search, theme toggle), footer, client-side search from `search.json`. |
+| `_layouts/home.html` | Home page: hero, search, recent recipes, category/protein chips, optional submit CTA. |
+| `_layouts/recipe.html` | Recipe pages: metadata row (category, protein, times, source), then Markdown body. |
+| `_includes/recipe-card.html` | Reusable recipe card (used on home and in search results markup). |
+| `assets/css/tokens.css` | Design tokens (colours, type scale, motion, elevations). Light defaults on `:root`; `[data-theme="dark"]` overrides. |
+| `assets/css/main.css` | Layout and components. |
+| `assets/css/print.css` | Print styles for recipes (`media="print"`). |
 
-## 🛠️ Developer Tools
+Copy for the home hero comes from `_config.yml` (`title`, `description`, `home_lead`, `submit_recipe_url`). Prefer new colours as CSS variables in `tokens.css`, not hardcoded in components.
 
-The `_tools/` folder contains Python scripts to automate indexing, recipe formatting, and future enhancements like scraping and GitHub automation.
+## Developer tools
 
-For more details, see the [tools README](https://github.com/Tim-Claessen/yumlog/blob/main/_tools/README.md).
+The `_tools/` directory has Python helpers for search index generation, index pages, form import, and images. See [_tools/README.md](_tools/README.md).
+
+GitHub Actions (`.github/workflows/process_recipes.yml`) can import form submissions and refresh indexes; the live site is still built by GitHub Pages’ Jekyll when you push to `main`.
+
+## Line endings
+
+The repo uses `.gitattributes` with `* text=auto eol=lf` so text files normalize to LF. After cloning on Windows, use `git add --renormalize .` if you see whole-file CRLF diffs.
+
+## To-do
+
+- Improve the AI recipe generator experience (`ai_generator.md`)
+- Test and refine GitHub Actions automation
+- Optional: brief per-recipe descriptions in front matter
+
+## Credits
+
+Thanks to everyone whose cooking and writing inspired these recipes. Contributor acknowledgments: [Credits.md](Credits.md).
+
+## License
+
+[MIT License](LICENSE).
