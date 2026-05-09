@@ -682,11 +682,13 @@ nav.header-nav a .material-symbols-rounded {
   margin-bottom: 2rem;
 }
 
-.recipe-header__icons {
+.recipe-meta {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--md-outline-variant);
   display: flex;
   flex-wrap: wrap;
   gap: var(--shape-sm);
-  margin-bottom: 0.75rem;
 }
 
 .recipe-pill {

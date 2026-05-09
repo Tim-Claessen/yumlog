@@ -4,38 +4,6 @@ layout: default
 {% assign cat_raw = page.category | default: '' | replace: '[[', '' | replace: ']]', '' | replace: '"', '' | strip %}
 <article class="recipe-page">
   <header class="recipe-header">
-    <div class="recipe-header__icons" aria-label="Recipe tags">
-      {% if cat_raw != '' %}
-      <span class="recipe-pill">
-        <span class="material-symbols-rounded" aria-hidden="true">folder</span>
-        <span>{{ cat_raw | replace: '_', ' ' | escape }}</span>
-      </span>
-      {% endif %}
-      {% if page.protein %}
-      {% for praw in page.protein %}
-        {% assign pstrip = praw | replace: '[[', '' | replace: ']]', '' | replace: '"', '' | strip %}
-        {% if pstrip != '' %}
-      <span class="recipe-pill recipe-pill--outline">
-        <span class="material-symbols-rounded" aria-hidden="true">restaurant</span>
-        <span>{{ pstrip | replace: '_', ' ' | escape }}</span>
-      </span>
-        {% endif %}
-      {% endfor %}
-      {% endif %}
-      {% if page.prep_time_mins %}
-      <span class="recipe-pill">
-        <span class="material-symbols-rounded" aria-hidden="true">schedule</span>
-        <span>Prep {% if page.prep_time_mins == 1 %}1 min{% else %}{{ page.prep_time_mins }} min{% endif %}</span>
-      </span>
-      {% endif %}
-      {% assign _page_total_mins = page.total_time_mins | default: 0 %}
-      {% if _page_total_mins > 0 %}
-      <span class="recipe-pill">
-        <span class="material-symbols-rounded" aria-hidden="true">timer</span>
-        <span>Total {% if _page_total_mins == 1 %}1 min{% else %}{{ _page_total_mins }} min{% endif %}</span>
-      </span>
-      {% endif %}
-    </div>
     <h1 class="recipe-title">{{ page.title | escape }}</h1>
     {% if page.source and page.source != '' %}
     <p class="recipe-source"><span class="recipe-source__label">Source</span> <span class="recipe-source__value">{{ page.source | escape }}</span></p>
@@ -44,4 +12,36 @@ layout: default
   <div class="recipe-prose">
 {{ content }}
   </div>
+  <footer class="recipe-meta" aria-label="Recipe tags">
+    {% if cat_raw != '' %}
+    <span class="recipe-pill">
+      <span class="material-symbols-rounded" aria-hidden="true">folder</span>
+      <span>{{ cat_raw | replace: '_', ' ' | escape }}</span>
+    </span>
+    {% endif %}
+    {% if page.protein %}
+    {% for praw in page.protein %}
+      {% assign pstrip = praw | replace: '[[', '' | replace: ']]', '' | replace: '"', '' | strip %}
+      {% if pstrip != '' %}
+    <span class="recipe-pill recipe-pill--outline">
+      <span class="material-symbols-rounded" aria-hidden="true">restaurant</span>
+      <span>{{ pstrip | replace: '_', ' ' | escape }}</span>
+    </span>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% if page.prep_time_mins %}
+    <span class="recipe-pill">
+      <span class="material-symbols-rounded" aria-hidden="true">schedule</span>
+      <span>Prep {% if page.prep_time_mins == 1 %}1 min{% else %}{{ page.prep_time_mins }} min{% endif %}</span>
+    </span>
+    {% endif %}
+    {% assign _page_total_mins = page.total_time_mins | default: 0 %}
+    {% if _page_total_mins > 0 %}
+    <span class="recipe-pill">
+      <span class="material-symbols-rounded" aria-hidden="true">timer</span>
+      <span>Total {% if _page_total_mins == 1 %}1 min{% else %}{{ _page_total_mins }} min{% endif %}</span>
+    </span>
+    {% endif %}
+  </footer>
 </article>
