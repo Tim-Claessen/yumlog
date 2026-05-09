@@ -1,6 +1,6 @@
 ---
 title: Choc Chip Cookies
-category: "[[sweet]]"
+category: "[[sweet_treat]]"
 protein:
   - "[[other]]"
 prep_time_mins: 10

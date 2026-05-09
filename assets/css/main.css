@@ -181,7 +181,7 @@ mark {
 }
 
 .theme-toggle {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 2.75rem;
@@ -519,6 +519,12 @@ nav.header-nav a .material-symbols-rounded {
   grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
 }
 
+@media (min-width: 769px) {
+  .recipe-card-grid--three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* -------------------------------------------------------------------------- */
 /* Home sections & chips                                                      */
 /* -------------------------------------------------------------------------- */
@@ -551,7 +557,7 @@ nav.header-nav a .material-symbols-rounded {
 .chip-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--shape-sm);
+  gap: var(--shape-xs);
 }
 
 .chip {
@@ -561,7 +567,7 @@ nav.header-nav a .material-symbols-rounded {
   padding: 0.45rem 0.85rem;
   border-radius: var(--shape-xl);
   font-size: var(--type-label-large);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   transition:
     background var(--duration-short) var(--ease-standard),
@@ -570,7 +576,7 @@ nav.header-nav a .material-symbols-rounded {
 }
 
 .chip__icon {
-  font-size: var(--icon-inline);
+  font-size: var(--icon-small);
 }
 
 .chip--filled {
@@ -594,7 +600,7 @@ nav.header-nav a .material-symbols-rounded {
 .chip--outlined {
   background: transparent;
   color: var(--md-on-surface);
-  border: 1px solid var(--md-outline);
+  border: 1px solid var(--md-outline-variant);
 }
 
 .chip--outlined:hover {
@@ -604,7 +610,7 @@ nav.header-nav a .material-symbols-rounded {
 }
 
 .chip--outlined .chip__icon {
-  color: var(--md-secondary);
+  color: var(--md-primary);
 }
 
 .home-cta {
@@ -777,8 +783,34 @@ nav.header-nav a .material-symbols-rounded {
 
 .page-browse-list main > h1,
 .page-browse-list #main-content > h1 {
+  display: flex;
+  align-items: center;
+  gap: var(--shape-sm);
   font-size: var(--type-headline-large);
   margin-bottom: 1.25rem;
+}
+
+.page-browse-category main > h1::before,
+.page-browse-category #main-content > h1::before,
+.page-browse-protein main > h1::before,
+.page-browse-protein #main-content > h1::before {
+  font-family: var(--font-icon);
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  flex-shrink: 0;
+  color: var(--md-secondary);
+  font-size: var(--icon-large);
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-browse-category main > h1::before,
+.page-browse-category #main-content > h1::before {
+  content: "folder";
+}
+
+.page-browse-protein main > h1::before,
+.page-browse-protein #main-content > h1::before {
+  content: "kebab_dining";
 }
 
 .page-browse-list main > ul,
@@ -838,7 +870,7 @@ nav.header-nav a .material-symbols-rounded {
 .page-browse-protein #main-content > ul > li > a::before {
   font-family: var(--font-icon);
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-  content: "nutrition";
+  content: "kebab_dining";
   flex-shrink: 0;
   display: flex;
   align-items: center;

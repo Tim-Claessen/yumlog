@@ -3,7 +3,7 @@ layout: default
 title: AI Recipe Generator
 ---
 
-# 🍳 Yumlog Recipe Generator
+# Yumlog Recipe Generator
 
 Turn your cooking idea into a custom recipe — the Yumlog way.  
 Type your idea into the assistant below, get 3 recipe options, and pick your favourite.
@@ -87,4 +87,4 @@ Type your idea into the assistant below, get 3 recipe options, and pick your fav
   }
 </script>
 
-_🧠 Powered by AI. No login required. Free for anyone to use._
+_Powered by AI. No login required. Free for anyone to use._

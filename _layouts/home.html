@@ -3,7 +3,6 @@ layout: default
 ---
 
 {% assign recipe_pages = site.pages | where: "layout", "recipe" %}
-{% assign sorted_recipes = recipe_pages | sort: "date_created" | reverse %}
 
 <section class="home-hero" aria-labelledby="home-hero-title">
   <div class="home-hero__inner">
@@ -31,19 +30,22 @@ layout: default
 
 <div id="search-results" class="search-results search-results--home" aria-live="polite" aria-atomic="true" aria-describedby="search-hint-home"></div>
 
-<section class="home-section" aria-labelledby="recent-heading">
-  <h2 id="recent-heading" class="home-section__title">
-    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">schedule</span>
-    Recently added
+<section class="home-section" aria-labelledby="favourites-heading">
+  <h2 id="favourites-heading" class="home-section__title">
+    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">favorite</span>
+    Favourites
   </h2>
-  <div class="recipe-card-grid">
-    {% for r in sorted_recipes limit: 6 %}
-      {% include recipe-card.html recipe=r icon="menu_book" %}
+  <div class="recipe-card-grid recipe-card-grid--three">
+    {% for slug in site.home_favourites %}
+      {% assign fname = slug | append: ".md" %}
+      {% assign fav = recipe_pages | where: "name", fname | first %}
+      {% include require-recipe-page.html page=fav slug=slug %}
+      {% include recipe-card.html recipe=fav icon="menu_book" %}
     {% endfor %}
   </div>
 </section>
 
-{% assign cat_pages = site.pages | where_exp: "p", "p.path contains 'category/'" | sort: "title" %}
+{% assign cat_pages = site.pages | where_exp: "p", "p.path contains 'category/'" | sort: "name" %}
 <section class="home-section" aria-labelledby="browse-cat-heading">
   <h2 id="browse-cat-heading" class="home-section__title">
     <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">folder</span>
@@ -51,27 +53,41 @@ layout: default
   </h2>
   <div class="chip-grid chip-grid--category" role="list">
     {% for c in cat_pages %}
-    {% assign clabel = c.title | default: c.name | default: '' | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
-    <a role="listitem" class="chip chip--filled" href="{{ c.url | relative_url }}">
+    {% assign cbase = c.name | default: '' | replace: '.md', '' %}
+    {% assign craw = cbase | replace: '_', ' ' %}
+    {% if cbase == 'appetisers_sides' %}
+      {% assign craw = 'appetisers & sides' %}
+    {% elsif cbase == 'grains_rice' %}
+      {% assign craw = 'grains & rice' %}
+    {% endif %}
+    {% assign cwords = craw | split: ' ' %}
+    {% capture clabel %}{% for word in cwords %}{% unless forloop.first %} {% endunless %}{{ word | capitalize }}{% endfor %}{% endcapture %}
+    <a role="listitem" class="chip chip--outlined" href="{{ c.url | relative_url }}">
       <span class="material-symbols-rounded chip__icon" aria-hidden="true">folder</span>
-      <span class="chip__label">{{ clabel | escape }}</span>
+      <span class="chip__label">{{ clabel | escape_once }}</span>
     </a>
     {% endfor %}
   </div>
 </section>
 
-{% assign prot_pages = site.pages | where_exp: "p", "p.path contains 'protein/'" | sort: "title" %}
+{% assign prot_pages = site.pages | where_exp: "p", "p.path contains 'protein/'" | sort: "name" %}
 <section class="home-section" aria-labelledby="browse-pro-heading">
   <h2 id="browse-pro-heading" class="home-section__title">
-    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">nutrition</span>
+    <span class="material-symbols-rounded home-section__title-icon" aria-hidden="true">kebab_dining</span>
     Browse by protein
   </h2>
   <div class="chip-grid chip-grid--protein" role="list">
     {% for prot in prot_pages %}
-    {% assign plabel = prot.title | default: prot.name | default: '' | replace: '.md', '' | remove: '#' | strip | replace: '_', ' ' %}
+    {% assign pbase = prot.name | default: '' | replace: '.md', '' %}
+    {% assign praw = pbase | replace: '_', ' ' %}
+    {% if pbase == 'nuts_seed' or pbase == 'nuts_seeds' %}
+      {% assign praw = 'nuts & seeds' %}
+    {% endif %}
+    {% assign pwords = praw | split: ' ' %}
+    {% capture plabel %}{% for word in pwords %}{% unless forloop.first %} {% endunless %}{{ word | capitalize }}{% endfor %}{% endcapture %}
     <a role="listitem" class="chip chip--outlined" href="{{ prot.url | relative_url }}">
-      <span class="material-symbols-rounded chip__icon" aria-hidden="true">nutrition</span>
-      <span class="chip__label">{{ plabel | escape }}</span>
+      <span class="material-symbols-rounded chip__icon" aria-hidden="true">kebab_dining</span>
+      <span class="chip__label">{{ plabel | escape_once }}</span>
     </a>
     {% endfor %}
   </div>

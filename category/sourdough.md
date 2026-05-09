@@ -1,4 +1,4 @@
-# 🍞 Sourdough Recipes
+# Sourdough Recipes
 
 - [Cheesy Garlic Sourdough Focaccia](../recipes/cheesy_garlic_sourdough_focaccia.md)
 - [Cinnamon Roll Sourdough Focaccia](../recipes/cinnamon_roll_sourdough_focaccia.md)

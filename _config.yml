@@ -10,3 +10,8 @@ home_lead: >
   skim what’s new, or wander the shelves by category and protein.
 
 submit_recipe_url: "https://forms.gle/Fj8Szehe23sCvq6GA"
+
+home_favourites:
+  - sourdough_bread
+  - mixed_berry_muffins
+  - eggplant_parmi

@@ -7,12 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
     (function () {
-      var k = 'yumlog-theme';
-      var stored = localStorage.getItem(k);
-      var theme = stored === 'light' || stored === 'dark'
-        ? stored
-        : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      document.documentElement.setAttribute('data-theme', theme);
+      // Dark mode preserved but hidden — re-enable by restoring stored/system preference detection and unhiding .theme-toggle in main.css
+      document.documentElement.setAttribute('data-theme', 'light');
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,7 +41,7 @@
             <span>Category</span>
           </a>
           <a href="{{ '/indexes/proteins' | relative_url }}">
-            <span class="material-symbols-rounded material-symbols-rounded--small" aria-hidden="true">nutrition</span>
+            <span class="material-symbols-rounded material-symbols-rounded--small" aria-hidden="true">kebab_dining</span>
             <span>Protein</span>
           </a>
           <a href="{{ '/indexes/alphabet' | relative_url }}">
@@ -86,16 +82,12 @@
           <a href="{{ '/indexes/categories' | relative_url }}">Browse by Category</a>
         </li>
         <li>
-          <span class="material-symbols-rounded" aria-hidden="true">nutrition</span>
+          <span class="material-symbols-rounded" aria-hidden="true">kebab_dining</span>
           <a href="{{ '/indexes/proteins' | relative_url }}">Browse by Protein</a>
         </li>
         <li>
           <span class="material-symbols-rounded" aria-hidden="true">sort_by_alpha</span>
           <a href="{{ '/indexes/alphabet' | relative_url }}">A–Z Index</a>
-        </li>
-        <li>
-          <span class="material-symbols-rounded" aria-hidden="true">menu_book</span>
-          <a href="{{ '/ai_generator' | relative_url }}">Yumlog Recipe Generator</a>
         </li>
       </ul>
     </nav>

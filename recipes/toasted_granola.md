@@ -1,6 +1,6 @@
 ---
 title: Toasted Granola
-category: "[[sweet]]"
+category: "[[sweet_treat]]"
 protein:
   - "[[nuts_seeds]]"
 prep_time_mins: 5

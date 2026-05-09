@@ -1,0 +1,6 @@
+{% comment %}
+  Abort the Jekyll build if a home favourite slug does not resolve to a recipe page.
+{% endcomment %}
+{% unless include.page %}
+  {% include _home_favourite_recipe_missing_abort.html %}
+{% endunless %}

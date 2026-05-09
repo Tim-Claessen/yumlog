@@ -1,6 +1,6 @@
 ---
 title: Baked Oatmeal
-category: "[[sweet]]"
+category: "[[sweet_treat]]"
 protein:
   - "[[other]]"
 prep_time_mins: 5

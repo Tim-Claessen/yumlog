@@ -1,6 +1,6 @@
 ---
 title: Mars Bar Slice
-category: "[[sweet treat]]"
+category: "[[sweet_treat]]"
 protein:
   - "[[other]]"
 prep_time_mins: 15

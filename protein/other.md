@@ -1,4 +1,4 @@
-# 🍴 Other
+# Other
 
 - [Apple Pie Slice](../recipes/apple_pie_slice.md)
 - [Baked Oatmeal](../recipes/baked_oatmeal.md)
